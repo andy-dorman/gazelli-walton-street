@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					sassDir: 'sass',
-					cssDir: 'css'
+					cssDir: 'css',
+                    environment: 'production'
 				}
 			}
 		},
@@ -13,10 +14,25 @@ module.exports = function(grunt) {
 			css: {
 				files: '**/*.scss',
 				tasks: ['compass']
-			}
-		}
+			},
+            js: {
+                files: 'javascripts/**/*.js',
+                tasks: 'uglify'
+            }
+		},
+        uglify: {
+            all: {
+                files: {
+                    'javascripts/walton-street.min.js': [
+                        'bower/jquery/dist/jquery.min.js',
+                        'bower/bootstrap/dist/js/bootstrap.min.js'
+                    ]
+                }
+            }
+        }
 	});
-	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default',['watch']);
+	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('default',['compass:dist', 'uglify', 'watch' ]);
 }
