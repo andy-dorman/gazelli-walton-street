@@ -1,0 +1,16 @@
+{
+  "name": "Gazelli Key Pledge",
+  "description": "Promotional website for the Walton Street Launch",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": null,
+    "bootstrap": null,
+    "jquery-ui": null,
+    "jquery.fancybox": null
+  },
+  "resolutions": {
+    "jquery": "2.1.1"
+  }
+}
