@@ -1,0 +1,29 @@
+- The piece of text begining 'Walton Street Sw3 is about to…' has too much padding left & tight. Needs to stretch across the whole column.
+
+ - Set Your Goal should be a roll over button which brings up the form.
+
+ - All the vertical spacing needs to be tightened up. So;
+	- Top key a little closer to the top
+	- DREAM LIVE LEARN a touch closer to the key
+	- 'WALTON STREET'S NEWEST SECRET…' a little closer to DREAM LIVE LEARN
+	- White paragraph is ok vertically
+	- Lines around 'SET YOUR GOAL| need to be tighter and the words need to be centred.
+
+- All the initials in the keys are not in the centre of the little circle. Need to be higher.
+
+ - On the pink 'shelf' block, I like the spacing of the words 'MY GOAL IS TO:' but the learning of the actual goal text (Retire at 45 etc) is far too relaxed.
+
+- Would be nice to see the image in the back ground - adding a drop shadow to the grey content area so it floats off the floral background.
+
+- As discussed yesterday, I would always like there to be a minimum of 4 grey 'shadow' keys at the bottom, and the second row up is half empty (spending on how many entries there are)
+
+- The first 'LOCK IN YOUR OWN GOAL' should be the deeper claret red colour as per the drawing.
+
+- I would like to repeat the 'Lock in your own goal' on the very last space of the grid - I guess this one will have to move along every time a goal is entered. (remembering there should always be a minimum of 4 grey key shadowed boxes at the end.
+
+ - Grey shadowed keys look very low resolution and there are strange 'shadows' in the grey.
+
+ - The lines in the key grid do not have highlights all the way along. And some of the lines are upside down - horizontal lines; the shadow line should always be at the top and the highlight line should be at the bottom (as if the light is coming from above.
+Verticle lines; I guess the shadow line should be on the left, with the highlight line on the right (as off the light is coming from top left.
+
+'Site Details and Terms & Conditions should be a bit smaller. 

@@ -1,28 +1,38 @@
 @import "compass/css3";
 
+@include font-face("brandon_grotesquereg", font-files("../fonts/brandon_grotesque/brandon_reg-webfont.eot", "../fonts/brandon_grotesque/brandon_reg-webfont.woff2", "../fonts/brandon_grotesque/brandon_reg-webfont.ttf", "../fonts/brandon_grotesque/brandon_reg-webfont.svg"));
+
 @include font-face("brandon_grotesquelight", font-files("../fonts/brandon_grotesque/brandon_light-webfont.eot", "../fonts/brandon_grotesque/brandon_light-webfont.woff2", "../fonts/brandon_grotesque/brandon_light-webfont.ttf", "../fonts/brandon_grotesque/brandon_light-webfont.svg"));
+
+@include font-face("brandon_grotesquemed", font-files("../fonts/brandon_grotesque/brandon_med-webfont.eot", "../fonts/brandon_grotesque/brandon_med-webfont.woff2", "../fonts/brandon_grotesque/brandon_med-webfont.ttf", "../fonts/brandon_grotesque/brandon_med-webfont.svg"));
 
 @include font-face("bodonixtregular", font-files("../fonts/bodonixt_regular_macroman/BodoniXT-webfont.eot", "../fonts/bodonixt_regular_macroman/BodoniXT-webfont.woff", "../fonts/bodonixt_regular_macroman/BodoniXT-webfont.ttf", "../fonts/bodonixt_regular_macroman/BodoniXT-webfont.svg"));
 
 $font-family-serif:			"bodonixtregular";
 $font-family-sans-serif: 	"brandon_grotesquelight";
+$font-family-sans-serif-reg:"brandon_grotesquereg";
+$font-family-sans-serif-med:"brandon_grotesquemed";
 $brand-primary: 			#D7B5B3;
+$brand-tertiary:			#8F4C51;
 $headings-color:			$brand-primary;
 $headings-font-family:		$font-family-serif;
-$text-color:				#eee;
+$text-color:				#fff;
 $grid-gutter-width:         30px !default;
 
 // Small screen / tablet
-$container-tablet:             ((640px + $grid-gutter-width)) !default;
+$container-tablet:             ((660px + $grid-gutter-width)) !default;
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            ((860px + $grid-gutter-width)) !default;
+//$container-desktop:            ((860px + $grid-gutter-width)) !default;
+$container-desktop:            $container-tablet !default;
 //** For `$screen-md-min` and up.
-$container-md:                 $container-desktop !default;
+//$container-md:                 $container-desktop !default;
+$container-md:                 $container-tablet !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1060px + $grid-gutter-width)) !default;
+//$container-large-desktop:      ((1060px + $grid-gutter-width)) !default;
+$container-large-desktop:      $container-tablet !default;
 
 @import 'bootstrap';
