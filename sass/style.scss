@@ -106,6 +106,12 @@ header {
 }
 
 .key-panel-row {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+		top: 0px;
+	}
 	& .key-panel {
 		background: 			$site-bg url('../images/key-tag-no-goal.png') center top no-repeat;
 		height: 				178px;
