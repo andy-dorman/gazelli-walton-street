@@ -173,7 +173,7 @@ header {
 			color:	 				$site-bg;
 			position: 				relative;
 			top: 					50%;
-			transform: 				translateY(-6px);
+			transform: 				translateY(-50%);
 			margin: 				auto;
 		}
 
@@ -374,10 +374,16 @@ footer {
 		}
 
 	}
+
 	.key-panel-row {
 		& .key-panel {
-		margin-bottom: 					0;
+			margin-bottom: 					0;
 			border-bottom: 				1px solid $hr-rule-bottom-colour;
+			&.lock-in {
+				& p {
+					transform: 			translateY(-60%);
+				}
+			}
 			& ~ .key-panel {
 				border-left: 			none;
 				border-top: 			1px solid $hr-rule-top-colour;
