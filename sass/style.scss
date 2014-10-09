@@ -160,11 +160,11 @@ header {
 				height: 			$lock-in-text-height;
 				width: 				140px;
 				margin: 			auto;
-				position: 			relative;
+				position: 			absolute;
 				top: 				50%;
-				transform: 			translateY(-50%);
-				-webkit-transform: 	translateY(-50%);
 				margin: 			auto;
+				-webkit-transform:	translate3d(-50%, -50%,0);
+				left:				50%;
 			}
 		}
 
@@ -172,11 +172,11 @@ header {
 			width:					32px;
 			font-size:				$font-size-h3;
 			color:	 				$site-bg;
-			position: 				relative;
+			position: 				absolute;
 			top: 					50%;
-			transform: 				translateY(-25%);
-			-webkit-transform:		translateY(-25%);
+			left: 					50%;
 			margin: 				auto;
+			-webkit-transform:		translate3d(-50%, -30%, 0);
 		}
 
 		&:hover div {
@@ -384,7 +384,7 @@ footer {
 			border-bottom: 				1px solid $hr-rule-bottom-colour;
 			&.lock-in {
 				& p {
-					height: 			120px;
+//					height: 			120px;
 				}
 			}
 			& ~ .key-panel {
