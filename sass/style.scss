@@ -381,7 +381,8 @@ footer {
 			border-bottom: 				1px solid $hr-rule-bottom-colour;
 			&.lock-in {
 				& p {
-					transform: 			translateY(-60%);
+					transform: 			translateY(-50%);
+					height: 			auto;
 				}
 			}
 			& ~ .key-panel {
