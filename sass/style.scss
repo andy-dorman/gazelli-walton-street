@@ -424,3 +424,9 @@ footer {
 		}
 	}
 }
+
+@media(max-height:479px){
+	textarea {
+		height: 80px;
+	}
+}
