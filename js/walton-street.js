@@ -32,7 +32,7 @@
 					fitToView	: true,
 					autoSize	: true,
 					closeClick	: false,
-					closeBtn	: true,
+					closeBtn	: false,
 					openEffect	: 'none',
 					closeEffect	: 'none',
 					scrolling	: 'yes',
