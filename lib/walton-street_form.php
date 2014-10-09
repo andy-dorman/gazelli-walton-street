@@ -19,8 +19,8 @@
 			<textarea id="goal" name="goal" placeholder="MY GOAL IS TO:"></textarea>
 		</div>
 		<div class="form-group">
-			<p class="col-xs-8">DISCLAIMER: We will not share your details with any third parties</p>
-			<input class="submit col-xs-4" type="submit" value="SUBMIT" />
+			<p class="col-xs-7">DISCLAIMER: We will not share your details with any third parties</p>
+			<input class="submit col-xs-4 pull-right" type="submit" value="SUBMIT" />
 		</div>
 	</form>
 </div>

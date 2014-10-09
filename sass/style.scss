@@ -264,11 +264,12 @@ footer {
 .social-icons {
 	& > ul {
 		position: 						relative;
-		transform:						translateX(-45.5%);
+		transform:						translateX(-50%);
 		left: 							50%;
 		margin-top:						16px;
 		margin-bottom:					0px;
-			
+		width:							110%;
+		margin-left: 					0px;
 		& li {
 			line-height:				18px;
 			vertical-align: 			middle;
@@ -297,59 +298,6 @@ footer {
 	}
 }
 
-@media(max-width:767px){
-	.key-panel-row {
-		& .key-panel {
-		margin-bottom: 					0;
-			border-bottom: 				1px solid $hr-rule-bottom-colour;
-			& ~ .key-panel {
-				border-left: 			none;
-				border-top: 			1px solid $hr-rule-top-colour;
-
-				&:last-of-type {
-				border-bottom:none;
-				}
-				&:before,
-				&:after {
-					content: 			none;
-					border:				none;
-				}
-			}
-
-		}
-	}
-
-	header {
-		& h2 {
-			font-size: 					$font-size-h3;
-		}
-
-		.navbar-toggle {
-			display: 					none;
-		}
-	}
-
-	footer {
-		& .list-inline {
-			margin-top:					0;
-			float: 						none !important;
-			width:						auto;
-			display:					inline-block;
-			left:						50%;
-			transform:					translateX(-50%);
-			position:					relative;
-			margin:						20px auto 10px auto;
-		}
-
-		& div > .list-inline {
-			margin-top:					20px;
-			& ~ .list-inline {
-				margin-top:				0;
-			}
-		}
-	}
-}
-
 #walton-street_entry {
 	z-index:							2000;
 	position:							relative;
@@ -370,12 +318,12 @@ footer {
 	& .form-group {
 		margin-bottom:					5px;
 
-		& input,
+		& input[type=text],
 		& textarea {
-			width:						100%;
+			width:						100%;			
+			padding:					10px;
 			background:					$site-bg;
 			border:						none;
-			padding:					10px;
 			line-height:				1.3em;
 			color:						$brand_primary;
 		}
@@ -400,10 +348,79 @@ footer {
 		}
 
 		& .submit {
-			width:						auto;
 			font-size:					$font-size-large;
-			padding:					10px 16px;
-			margin-left:				6px;
+			padding:					10px 0px;
+			background:					$site-bg;
+			border:						none;
+			line-height:				1.3em;
+			color:						$brand_primary;
+		}
+	}
+}
+
+@media(max-width:767px){
+	#walton-street_entry {
+		width:							100%;
+		& .form-group {
+			& textarea {
+				height:					180px;
+			}
+
+			& p {
+				font-size:				10px;
+				margin-right:			8px;
+			}
+		}
+
+	}
+	.key-panel-row {
+		& .key-panel {
+		margin-bottom: 					0;
+			border-bottom: 				1px solid $hr-rule-bottom-colour;
+			& ~ .key-panel {
+				border-left: 			none;
+				border-top: 			1px solid $hr-rule-top-colour;
+
+				&:last-of-type {
+				border-bottom:none;
+				}
+				&:before,
+				&:after {
+					content: 			none;
+					border:				none;
+				}
+			}
+
+		}
+	}
+
+	header {
+		& h2 {
+			font-size: 					$font-size-h4;
+		}
+
+		.navbar-toggle {
+			display: 					none;
+		}
+	}
+
+	footer {
+		& .list-inline {
+			margin-top:					0;
+			float: 						none !important;
+			width:						auto;
+			display:					inline-block;
+			left:						50%;
+			transform:					translateX(-50%);
+			position:					relative;
+			margin:						20px auto 10px auto;
+		}
+
+		& div > .list-inline {
+			margin-top:					20px;
+			& ~ .list-inline {
+				margin-top:				0;
+			}
 		}
 	}
 }

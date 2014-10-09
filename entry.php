@@ -16,31 +16,24 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
     	$_POST[$key] = mysql_real_escape_string($value); 
   	}
 		
-	$fname = $_POST['fname'];
-	$lname = $_POST['lname'];
+	$fname = $_POST['name'];
 	$email = $_POST['email'];
-	//$address1 = $_POST['address1'];
-	//$address2 = $_POST['address2'];
-	//$city = $_POST['city'];
-	//$postcode = $_POST['postcode'];
-	$tel = $_POST['telephone'];
-	$country = $_POST['country'];
-	$wish = $_POST['wish'];
-	$left = $_POST['left'];
-	$top = $_POST['top'];
+	$goal = $_POST['goal'];
+
+	$code = "0123";
 	
 	if (mysql_errno($mysqli)) {
 	    printf("Connect failed: %s\n", mysql_error());
 	    exit();
 	}
 	
-	$query = "INSERT INTO customers (first_name, last_name, email, telephone, country, wish, left_pos, top_pos) VALUES ('".$fname."', '".$lname."', '".$email."',  '".$tel."', '".$country."', '".$wish."', ". $left.", ". $top.")";
+	$query = "INSERT INTO customers (name, email, goal, code) VALUES ('".$name."', '".$email."',  '".$goal."', '".$code."')";
 	
 	//if($result = $mysqli->query($query)) {
 	if($result = mysql_query($query)) {
 		$out["id"] = mysql_insert_id();
-		$out["wish"] = $wish;
-		$out["name"] = $fname;
+		$out["goal"] = $wish;
+		$out["name"] = $name;
 		$out["result"] = "success";
 		$out["thanks"] = '<div class="thankyou"><h2>Thank You</h2><h3>FOR YOUR ENTRY</h3><p>Winners will be drawn on March 28th and notified via email or telephone.</p><div><a href="#" class="closefancybox">RETURN TO THE WISH TREE</a><a href="http://gazellicosmetics.com" class="last-child">VISIT gazellicosmetics.com</a></div></div>';
 	} else {

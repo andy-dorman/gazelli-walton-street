@@ -25,7 +25,7 @@
 			success: function(data) {
 			
 				$.fancybox({
-	                fixed		: false,
+	                fixed		: true,
 	                enableEscapeButton : true,
 	                overlayShow : true,
 	                content: data,
@@ -35,7 +35,7 @@
 					closeBtn	: true,
 					openEffect	: 'none',
 					closeEffect	: 'none',
-					scrolling	: 'no',
+					scrolling	: 'yes',
 					onCleanup: function () {
 	                    if (!tag.attr("data-wish")) {
 	                        tag.remove();
