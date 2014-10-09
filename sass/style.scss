@@ -163,6 +163,7 @@ header {
 				position: 			relative;
 				top: 				50%;
 				transform: 			translateY(-50%);
+				-webkit-transform: 	translateY(-50%);
 				margin: 			auto;
 			}
 		}
@@ -174,6 +175,7 @@ header {
 			position: 				relative;
 			top: 					50%;
 			transform: 				translateY(-25%);
+			-webkit-transform:		translateY(-25%);
 			margin: 				auto;
 		}
 
@@ -265,6 +267,7 @@ footer {
 	& > ul {
 		position: 						relative;
 		transform:						translateX(-50%);
+		-webkit-transform:				translateX(-50%);
 		left: 							50%;
 		margin-top:						16px;
 		margin-bottom:					0px;
@@ -381,12 +384,8 @@ footer {
 			border-bottom: 				1px solid $hr-rule-bottom-colour;
 			&.lock-in {
 				& p {
-					transform: 			translateY(-70%);
 					height: 			120px;
 				}
-			}
-			&.goal > h4 {
-				transform: 				translateY(-70%);
 			}
 			& ~ .key-panel {
 				border-left: 			none;
@@ -423,6 +422,7 @@ footer {
 			display:					inline-block;
 			left:						50%;
 			transform:					translateX(-50%);
+			-webkit-transform:			translateX(-50%);
 			position:					relative;
 			margin:						20px auto 10px auto;
 		}
