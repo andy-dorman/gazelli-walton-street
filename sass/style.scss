@@ -162,7 +162,7 @@ header {
 				margin: 			auto;
 				position: 			relative;
 				top: 				50%;
-				transform: 			translateY(-15px);
+				transform: 			translateY(-50%);
 				margin: 			auto;
 			}
 		}
@@ -346,6 +346,64 @@ footer {
 			& ~ .list-inline {
 				margin-top:				0;
 			}
+		}
+	}
+}
+
+#walton-street_entry {
+	z-index:							2000;
+	position:							relative;
+	background:							$brand_primary;
+	width:								340px;
+	height:								550px;
+	padding: 							4px 20px 20px;
+
+	& h3 {
+		padding-top:					60px;
+		color:							$site-bg;
+		text-align:						center;
+		background: 					transparent url('../images/key-logo-90.png') top center no-repeat;
+		line-height:					1.2em;
+		margin-bottom:					18px;
+	}
+
+	& .form-group {
+		margin-bottom:					5px;
+
+		& input,
+		& textarea {
+			width:						100%;
+			background:					$site-bg;
+			border:						none;
+			padding:					10px;
+			line-height:				1.3em;
+			color:						$brand_primary;
+		}
+
+		::-webkit-input-placeholder,
+		:-moz-placeholder,
+		::-moz-placeholder,
+		:-ms-input-placeholder {  
+		   color:						$brand_primary;
+		}
+
+		& textarea {
+			height:						235px;
+		}
+
+		& p {
+			padding:					0;
+			color:						$site-bg;
+			font-size:					$font-size-small;
+			line-height:				1.1em;
+			margin-top:					10px;
+		}
+
+		& .submit {
+			width:						auto;
+			font-size:					$font-size-large;
+			padding:					10px 16px;
+			margin-left:				6px;
 		}
 	}
 }

@@ -25,7 +25,10 @@ module.exports = function(grunt) {
                 files: {
                     'javascripts/walton-street.min.js': [
                         'bower/jquery/dist/jquery.min.js',
-                        'bower/bootstrap/dist/js/bootstrap.min.js'
+                        'bower/bootstrap/dist/js/bootstrap.min.js',
+                        'js/jquery.fancybox.pack.js',
+                        'js/jquery.form.js',
+                        'js/walton-street.js'
                     ]
                 }
             }
