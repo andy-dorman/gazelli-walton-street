@@ -173,7 +173,7 @@ header {
 			color:	 				$site-bg;
 			position: 				relative;
 			top: 					50%;
-			transform: 				translateY(-50%);
+			transform: 				translateY(-25%);
 			margin: 				auto;
 		}
 
@@ -381,9 +381,12 @@ footer {
 			border-bottom: 				1px solid $hr-rule-bottom-colour;
 			&.lock-in {
 				& p {
-					transform: 			translateY(-50%);
+					transform: 			translateY(-70%);
 					height: 			120px;
 				}
+			}
+			&.goal > h4 {
+				transform: 				translateY(-70%);
 			}
 			& ~ .key-panel {
 				border-left: 			none;
