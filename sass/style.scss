@@ -386,6 +386,11 @@ footer {
 @media(max-width:767px){
 	#walton-street_entry {
 		width:							100%;
+		& h3 {
+			background-image:			url('../images/key-logo-90-small.png');
+			padding-top:				40px;
+			font-size:					12px;
+		}
 		& .form-group {
 			& textarea {
 				height:					180px;
