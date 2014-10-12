@@ -35,7 +35,7 @@
 					closeBtn	: false,
 					openEffect	: 'none',
 					closeEffect	: 'none',
-					scrolling	: 'no',
+					scrolling	: 'yes',
 					onCleanup: function () {
 	                    if (!tag.attr("data-wish")) {
 	                        tag.remove();
