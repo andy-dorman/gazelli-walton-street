@@ -124,7 +124,8 @@ header {
 			position: 			absolute;
 			top: 				0px;
 			clip: 				rect(178px, 500px, 178px, 0px);
-			@include transition(all 0.2s ease-in-out);
+			@include 			transition(all 0.2s ease-in-out);
+			//transition: 		all 0.2s ease-in-out;
 			height: 			100%;
 			width:				100%;
 			background-color: 	$brand-primary;
@@ -133,12 +134,12 @@ header {
 			& p,
 			& h4 {
 				color:			$gray-dark;
-				max-width:		150px;
+				max-width:		120px;
 				margin:			auto;
 			}
 
 			& h4 {
-				font-size:		$font-size-h3;
+				font-size:		$font-size-h5;
 				margin-top:		24px;
 				margin-bottom:	6px;
 			}
@@ -150,6 +151,7 @@ header {
 
 		&.lock-in {
 			background-image:			url('../images/key-tag-lock-in.png');
+			cursor:						pointer;
 
 			& div {
 				background-image: 		url('../images/key-tag-lock-in.png');
@@ -167,6 +169,7 @@ header {
 				margin: 			auto;
 				@include            transform(translate3d(-50%, -50%,0));
 				left:				50%;
+				color:				#FFFFFF;
 			}
 		}
 
@@ -268,7 +271,7 @@ footer {
 .social-icons {
 	& > ul {
 		position: 						relative;
-		@include                        transform(translateX(-50%));
+		@include                        transform(translateX(-46.5%));
 		left: 							50%;
 		margin-top:						16px;
 		margin-bottom:					0px;
@@ -298,6 +301,20 @@ footer {
 			&.email {
 				background:				url('../images/icon-email.png') no-repeat top left;
 			}
+			&.dark {
+				height: 				23px;
+				width: 					23px;
+				margin-left: 			8px;
+			}
+			&.dark.twitter {
+				background:				url('../images/icon-twitter-dark.png') no-repeat top left;
+			}
+			&.dark.facebook {
+				background:				url('../images/icon-facebook-dark.png') no-repeat top left;
+			}
+			&.dark.email {
+				background:				url('../images/icon-email-dark.png') no-repeat top left;
+			}
 		}
 	}
 }
@@ -307,7 +324,6 @@ footer {
 	position:							relative;
 	background:							$brand_primary;
 	width:								340px;
-	height:								550px;
 	padding: 							4px 20px 20px;
 
 	& h3 {
@@ -320,8 +336,8 @@ footer {
 	}
 
 	& .form-group {
-		margin-bottom:					5px;
 
+		margin-bottom:					5px;
 		& input[type=text],
 		& textarea {
 			width:						100%;			
@@ -358,6 +374,11 @@ footer {
 			border:						none;
 			line-height:				1.3em;
 			color:						$brand_primary;
+		}
+
+		& .submit:after {
+			clear: both;
+			content: '';
 		}
 	}
 }
@@ -445,4 +466,30 @@ footer {
 			}
 		}
 	}
+}
+#errors {
+	position: absolute;
+	top: 50%;
+	background: rgba(255,255,255,.9);
+	z-index: 10;
+	@include							transform(translate3d(-50%, -50%, 0));
+	padding: 20px;
+	left: 50%;
+	width: 80%;
+	& h3 {
+		padding-top: 					0;
+		background:						none;
+	}
+}
+
+#oklink {
+	background: 						$site-bg;
+	text-align:							center;
+	padding: 							10px;
+	width: 								60px;
+	display:							inline-block;
+	margin-top: 						20px;
+	position: 							relative;
+	left:								50%;
+	@include							transform(translateX(-50%));
 }

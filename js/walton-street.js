@@ -35,7 +35,7 @@
 					closeBtn	: false,
 					openEffect	: 'none',
 					closeEffect	: 'none',
-					scrolling	: 'yes',
+					scrolling	: 'no',
 					onCleanup: function () {
 	                    if (!tag.attr("data-wish")) {
 	                        tag.remove();
@@ -49,20 +49,19 @@
 					} // helpers
 				});
 				var options = {
+
 	                target: '#walton-street_entry',
 	                // target element(s) to be updated with server response 
 	                beforeSubmit: validateGoal,
 	                // pre-submit callback 
 	                success: function (response) {
 	                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
-	                    tag.attr({
-	                        "data-wish": response["wish"],
-	                        "data-name": response["name"]
-	                    });
-	                    $(".closefancybox").click(function (e) {
+
+	                    $("#oklink").click(function (e) {
 	                        e.preventDefault();
 	                        $.fancybox.close();
 	                    });
+
 	                },
 	                dataType: "json"
 	            };
@@ -116,11 +115,8 @@
 	        	var error = "";
 		        switch(out[i])
 				{
-				case "fname":
-				  error = "First name";
-				  break;
-				case "lname":
-				  error = "Last name";
+				case "name":
+				  error = "Name";
 				  break;
 				default:
 				  error = out[i].charAt(0).toUpperCase() + out[i].slice(1);
@@ -131,7 +127,7 @@
 	        var errors = $('<div/>').attr({
 	            "id": "errors"
 	        }).html(errors_out);
-	        $("#wishingtree_entry").append(errors);
+	        $("#walton-street_entry").append(errors);
 
 	        var oklink = $('<a/>').attr({
 	            "id": "oklink",
@@ -145,14 +141,11 @@
 	            $("#errors").remove();
 	        });
 
-	        $('#errors').css({
-	            marginTop: "-" + ($('#errors').height() / 2) + "px"
-	        })
 	        $.fancybox.resize();
 	        out = false;
 	    }
 	    return out;
 	}
 
-	$('.lock-in').bind('click', getForm);
+	$('.lock-in, #lock-in-link').bind('click', getForm);
 })(jQuery)

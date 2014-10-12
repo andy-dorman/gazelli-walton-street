@@ -16,7 +16,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
     	$_POST[$key] = mysql_real_escape_string($value); 
   	}
 		
-	$fname = $_POST['name'];
+	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$goal = $_POST['goal'];
 
@@ -32,10 +32,20 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	//if($result = $mysqli->query($query)) {
 	if($result = mysql_query($query)) {
 		$out["id"] = mysql_insert_id();
-		$out["goal"] = $wish;
+		$out["goal"] = $goal;
 		$out["name"] = $name;
 		$out["result"] = "success";
-		$out["thanks"] = '<div class="thankyou"><h2>Thank You</h2><h3>FOR YOUR ENTRY</h3><p>Winners will be drawn on March 28th and notified via email or telephone.</p><div><a href="#" class="closefancybox">RETURN TO THE WISH TREE</a><a href="http://gazellicosmetics.com" class="last-child">VISIT gazellicosmetics.com</a></div></div>';
+		$out["thanks"] = '<div class="thankyou"><h3>Congratulations for locking in your goal</h3>
+		<div class="social-icons">
+			<ul class="list-inline text-center">
+				<li class="social-icon twitter dark"><a href="www.twitter.com"></a></li>
+				<li class="social-icon facebook dark"><a href="www.facebook.com"></a></li>
+				<li class="social-icon email dark"><a href="www.email.com"></a></li>
+			</ul>
+		</div>
+		<p class="text-center">Share the Walton Secret with your friends and let them find their key</p>
+		<a href="#ok" id="oklink">OK</a>
+		</div>';
 	} else {
 		$out["result"] = mysql_error();
 	}
