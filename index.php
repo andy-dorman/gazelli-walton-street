@@ -1,4 +1,27 @@
+<?php
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
+require 'lib/db.php';
 
+$query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,13;";
+  
+//$result = $mysqli->query($query);
+$result = mysql_query($query);
+
+
+function getInitals($name) {
+  $initials = "";
+  $expName = explode(" ", $name);
+  if (count($expName) > 1) {
+    $initals .= substr($expName[0], 0, 1);
+    $initals .= substr($expName[(count($expName) - 1)], 0, 1);
+  } else {
+    $initials .= substr($expName[0], 0, 2);
+  }
+
+  return $initials;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -88,47 +111,48 @@
               </p>
             </div>
         </div>
-        <div class="key-panel col-sm-3 goal">
-          <h4>AD</h4>
-          <div>
-            <h4 class="text-uppercase text-center">My goal is to</h4>
-            <p class="text-center">Own a piece of art from an artist I admire</p>
+
+        <?php
+        $count = 1;
+        if($result) {
+          while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+            if ($count%4 == 0) {
+            ?>
+            </div>
+            <div class="key-panel-row bottom-hr">
+            <?php
+            }
+            ?>
+            <div class="key-panel col-sm-3 goal">
+              <h4><?php echo getInitals($row['name']);?></h4>
+              <div>
+                <h4 class="text-uppercase text-center">My goal is to</h4>
+                <p class="text-center"><?php echo $row['goal']; ?></p>
+              </div>
+            </div>
+            <?php
+            $count++;
+          }
+          mysql_free_result($result);
+
+        }
+        $modCount = $count%4;
+        echo '<h1>'.$modCount.'</h1>';
+        $count = $modCount + (5 - $modCount);
+        echo '<h1>'.$count.'</h1>';
+        for($i = $modCount; $i > 0; $i--) {
+          if ($i%4 == 0) {
+          ?>
           </div>
-        </div>
-        <div class="key-panel col-sm-3 goal">
-          <h4>OE</h4>
-          <div>
-            <h4 class="text-uppercase text-center">My goal is to</h4>
-            <p class="text-center">Retire at 45.</p>
+          <div class="key-panel-row bottom-hr">
+          <?php
+          }
+          ?>
+          <div class="key-panel col-sm-3">
           </div>
-        </div>
-        <div class="key-panel col-sm-3 goal">
-          <h4>OE</h4>
-          <div>
-            <h4 class="text-uppercase text-center">My goal is to</h4>
-            <p class="text-center">Own a yacht</p>
-          </div>
-        </div>
-      </div>
-      <div class="key-panel-row bottom-hr">
-        <div class="key-panel col-sm-3 goal">
-          <h4>OE</h4>
-          <div>
-            <h4 class="text-uppercase text-center">My goal is to</h4>
-            <p class="text-center">Take over the world!!</p>
-          </div>
-        </div>
-        <div class="key-panel col-sm-3 goal">
-          <h4>OE</h4>
-          <div>
-            <h4 class="text-uppercase text-center">My goal is to</h4>
-            <p class="text-center">Become a millionaire by my 30th birthday</p>
-          </div>
-        </div>
-        <div class="key-panel col-sm-3">
-        </div>
-        <div class="key-panel col-sm-3">
-        </div>
+          <?php
+        }
+        ?>
       </div>
       <div class="social-icons bottom-hr">
         <ul class="list-inline text-center">
@@ -152,8 +176,7 @@
             <li><a href="http://www.elliecashmandesign.com" class="text-uppercase">Ellie Cashman</a></li>
           </ul>
           <ul class="list-inline pull-right">
-            <li class="separator"><a href="/site-details.html" class="text-uppercase">Site details</a></li>
-            <li class="separator"><a href="/site-details.html" class="text-uppercase">Terms & Conditions</a></li>
+            <li class="separator"><a href="tsandcs.html" class="fancybox fancybox.ajax text-uppercase">Terms & Conditions</a>
           </ul>
         </div>
       </footer>

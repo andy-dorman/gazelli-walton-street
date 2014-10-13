@@ -16,7 +16,7 @@
 		</div>
 		<div class="form-group">
 			<label for="goal">GOAL</label>
-			<textarea id="goal" name="goal" placeholder="MY GOAL IS TO:"></textarea>
+			<textarea id="goal" name="goal" placeholder="My goal is to..."></textarea>
 		</div>
 		<div class="form-group clearfix">
 			<p class="col-xs-7">DISCLAIMER: We will not share your details with any third parties</p>

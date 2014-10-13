@@ -174,14 +174,14 @@ header {
 		}
 
 		&.goal > h4 {
-			width:					32px;
+			text-transform:			uppercase;
 			font-size:				$font-size-h3;
 			color:	 				$site-bg;
 			position: 				absolute;
 			top: 					50%;
 			left: 					50%;
 			margin: 				auto;
-			@include                transform(translate3d(-50%, -20%, 0));
+			@include                transform(translate3d(-44%, -20%, 0));
 		}
 
 		&:hover div {
@@ -495,4 +495,19 @@ footer {
 	position: 							relative;
 	left:								50%;
 	@include							transform(translateX(-50%));
+}
+
+#tsandcs {
+	background: 						$brand_primary;
+	padding:							4px 20px 20px;
+	& * {
+		color:							$site_bg;
+	}
+	& h2 {
+		font-size:						$font_size_h4;
+	}
+
+	& a {
+		text-decoration:				underline;
+	}
 }

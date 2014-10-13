@@ -1,15 +1,16 @@
 ;(function($, undefined){
 	$(".fancybox").fancybox({
+        fixed		: true,
+        enableEscapeButton : true,
+        overlayShow : true,
 		fitToView	: true,
-		fixed		: true,
-		autoDimensions	: true,
-		closeClick	: false,
-		closeBtn	: true,
+		autoSize	: true,
+		closeClick	: true,
+		closeBtn	: false,
 		openEffect	: 'none',
 		closeEffect	: 'none',
-		scrolling	: 'no',
-		centerOnScroll: true,
-		showCloseButton:	true,
+		scrolling	: 'yes',
+        padding		: 0,
 		helpers : { 
 			overlay: {
 				css: {'background': 'rgba(0,0,0,0.8)'} // or your preferred hex color value
@@ -36,11 +37,6 @@
 					openEffect	: 'none',
 					closeEffect	: 'none',
 					scrolling	: 'yes',
-					onCleanup: function () {
-	                    if (!tag.attr("data-wish")) {
-	                        tag.remove();
-	                    }
-	                },
 	                padding		: 0,
 	                helpers 	: { 
 						overlay: {
@@ -61,6 +57,8 @@
 	                        e.preventDefault();
 	                        $.fancybox.close();
 	                    });
+
+	                    
 
 	                },
 	                dataType: "json"
