@@ -8,6 +8,142 @@
 require 'lib/db.php';
 $out = array();
 
+function sendEmail($email, $code, $goal) {
+	$to = strip_tags($email);
+
+	$subject = 'Thank you for your goal';
+
+	$headers = "From: oliver.edge@gazelli.co.uk\r\n";
+	$headers .= "Reply-To: oliver.edge@gazelli.co.uk\r\n";
+	//$headers .= "CC: susan@example.com\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+	$message .= '<html>';
+	$message .= '<body style="margin: 0; padding: 0;">';
+	$message .= '<div style="margin: 0; padding: 0;">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<tr>';
+	$message .= '<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; background: transparent url(images/email/top.png) left top no-repeat; text-align: center;" valign="top">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<tr>';
+	$message .= '<td width="220"></td>';
+	$message .= '<td align="center" width="360">';
+	$message .= '<p style="color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif;">';
+	$message .= 'if it does not display properly <a href="" style="color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif;">click here</a> to view it in your browser</p>';
+	$message .= '<td width="220"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td height="60" colspan="3"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td width="260"></td>';
+	$message .= '<td align="center">';
+	$message .= '<p style="width:240px; line-height: 1.8em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif;">';
+	$message .= 'Keep your key safe to receive your special gift at our exclusive launch party</p>';
+	$message .= '</td>';
+	$message .= '<td width="260"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td height="55" colspan="3"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td width="360"></td>';
+	$message .= '<td align="center" width="80">';
+	$message .= '<p style="margin-left: 2px;width:100px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif;">';
+	$message .= 'Your code</p>';
+	$message .= '</td>';
+	$message .= '<td width="360"></td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td width="348"><img src="http://walton-street.aomegasolutions.com/images/email/left.png"/></td>';
+	$message .= '<td width="104"><img src="http://walton-street.aomegasolutions.com/images/email_codes/'.$code.'.png" alt="Your code" /></td>';
+	$message .= '<td width="348"><img src="http://walton-street.aomegasolutions.com/images/email/right.png"/></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td colspan="3" width="800" height="745" valign="top" style="background: transparent url(images/email/bottom.png) left top no-repeat">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<tr>';
+	$message .= '<td style="padding-top: 50px;">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<tr>';
+	$message .= '<td width="215"></td>';
+	$message .= '<td width="370" align="center">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="370">';
+	$message .= '<tr>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 26px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">DREAM</td>';
+	$message .= '<td width="1" height="20" bgcolor="#8F4D51"></td>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 26px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">LIVE</td>';
+	$message .= '<td width="1" height="20" bgcolor="#8F4D51"></td>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 26px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">LEARN</td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td colspan="5" style="padding-top:10px; text-transform: uppercase; letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 16px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA;">';
+	$message .= 'Thank you & congratulations<br/> for locking in your goal';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '<td width="215"></td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td>';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<tr>';
+	$message .= '<td width="270"></td>';
+	$message .= '<td width="260" style="padding-top: 50px; ">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="260" style="border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;">';
+	$message .= '<tr>';
+	$message .= '<td width="10"></td>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">'.$goal.'</td>';
+	$message .= '<td width="10"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td width="10"></td>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">Laura Sarao 07.10.14</td>';
+	$message .= '<td width="10"></td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '<td width="280"></td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td width="280"></td>';
+	$message .= '<td width="260" style="padding-top: 20px;">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="260">';
+	$message .= '<tr>';
+	$message .= '<td style="text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA;">Share the Walton Secret with your friends and help them find their key</td>';
+	$message .= '</tr>';
+	$message .= '<tr>';
+	$message .= '<td style="text-align: center; padding-top: 10px;">';
+	$message .= '<a href="http://www.twitter.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-twitter.png" alt="Twitter" title="Twitter"/></a>';
+	$message .= '<a href="http://www.facebook.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-facebook.png" alt="Facebook" title="Facebook"/></a>';
+	$message .= '<a href="http://www.instagram.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-instagram.png" alt="Instagram" title="Instagram"/></a>';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '<td width="280"></td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</td>';
+	$message .= '</tr>';
+	$message .= '</table>';
+	$message .= '</div>';
+	$message .= '</body></html>';
+
+	mail($to, $subject, $message, $headers);
+}
+
 function getCode() {
 	$charList = array(
 		1 => "A",
@@ -97,7 +233,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		$initials .= substr($expName[0], 0, 2);
 	}
 
-	$my_img = imagecreate( 105, 45 );
+	$my_img = imagecreate( 104, 45 );
 	$background = imagecolorallocate( $my_img, 142, 76, 80 );
 	$text_colour = imagecolorallocate( $my_img, 255, 255, 255 );
 	//$line_colour = imagecolorallocate( $my_img, 128, 255, 0 );
@@ -106,7 +242,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	$bboxDim = imagettfbbox( 20, 0, "fonts/BodoniXT", $code );
 	$textWidth = abs($bboxDim[4] - $bboxDim[0]);
 	
-	$scale = 103/$textWidth;
+	$scale = 102/$textWidth;
 	$fontSize = 20 * $scale;
 
 	imagettftext( $my_img, $fontSize, 0, 1, 38, $text_colour, "fonts/BodoniXT", $code);
@@ -133,36 +269,11 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		<a href="#ok" id="oklink">OK</a>
 		</div>';
 
-		sendEmail($email, $code);
+		sendEmail($email, $code, $goal);
 	} else {
 		$out["result"] = mysql_error();
 	}
 	echo json_encode($out);
 	mysql_close($mysqli);
-
-	function sendEmail($email, $code) {
-		$to = strip_tags($email);
-
-		$subject = 'Thank you for your goal';
-
-		$headers = "From: oliver.edge@gazelli.co.uk\r\n";
-		$headers .= "Reply-To: oliver.edge@gazelli.co.uk\r\n";
-		//$headers .= "CC: susan@example.com\r\n";
-		$headers .= "MIME-Version: 1.0\r\n";
-		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-		$message = '<html><body>';
-		$message .= '<table rules="all" style="border-color: #666;" cellpadding="0" cellspacing="0" border="0" width="600">';
-		$message .= '<tr><td width="600" colspan="3"><img src="http://walton-street.aomegasolutions.com/images/email/top.png"/></td></tr>';
-		$message .= '<tr>';
-		$message .= '<td width="249"><img src="http://walton-street.aomegasolutions.com/images/email/left.png"/></td>';
-		$message .= '<td width="105"><img src="http://walton-street.aomegasolutions.com/images/email_codes/'.$code.'.png" alt="Your code" /></td>';
-		$message .= '<td width="247"><img src="http://walton-street.aomegasolutions.com/images/email/left.png"/></td>';
-		$message .= '<tr><td colspan="3"><img src="http://walton-street.aomegasolutions.com/images/email/bottom.png"/></td></tr>';
-		$message .= "</table>";
-		$message .= "</body></html>";
-
-		mail($to, $subject, $message, $headers);
-	}
 }
 ?>
