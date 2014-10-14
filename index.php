@@ -139,7 +139,7 @@ function getInitals($name) {
 
         }
         $modCount = 4 - $count%4;
-        $count = $modCount + 4;
+        $count = 100 - ($modCount + 4);
         for($i = $count; $i > 0; $i--) {
           if ($i%4 == 0) {
           ?>
