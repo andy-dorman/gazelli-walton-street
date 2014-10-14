@@ -18,8 +18,10 @@ function sendEmail($email, $code, $goal, $name) {
 	//$headers .= "CC: susan@example.com\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers .= "X-Mailer: MIME-Mail v0.03, 20070419\r\n";
 	$message = "";
 	$message .= "<html>";
+	$message .= "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
 	$message .= "<body style='margin: 0; padding: 0;'>";
 	$message .= "<div style='margin: 0; padding: 0;'>";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>";
@@ -139,6 +141,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "</table>";
 	$message .= "</div>";
 	$message .= "</body></html>";
+	$headers .= "Content-Length: ".strlen($message)."\r\n\r\n";
 
 	mail($to, $subject, $message, $headers);
 }
