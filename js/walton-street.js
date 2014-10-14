@@ -10,6 +10,7 @@
 		openEffect	: 'none',
 		closeEffect	: 'none',
 		scrolling	: 'yes',
+		width 		: 450, 
         padding		: 0,
 		helpers : { 
 			overlay: {
