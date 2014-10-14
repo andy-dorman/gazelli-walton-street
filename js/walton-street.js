@@ -12,7 +12,7 @@
 		scrolling	: 'yes',
 		width 		: 450, 
 		minWidth 	: 450,
-		height 		: 250,
+		height 		: 500,
         padding		: 0,
 		helpers : { 
 			overlay: {
