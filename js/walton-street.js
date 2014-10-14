@@ -21,7 +21,9 @@
 		} // helpers
     });
 
-	function getForm() {
+	function getForm(e) {
+		e.preventDefault();
+		e.stopPropagation();
 		var name, wish;
 		$.ajax({
 			url: "/lib/walton-street_form.php",

@@ -138,8 +138,9 @@ function getInitals($name) {
           mysql_free_result($result);
 
         }
+
         $modCount = 4 - $count%4;
-        $count = 100 - ($modCount + 4);
+        $count = floor($count/4) + 92 + $modCount + 4;
         for($i = $count; $i > 0; $i--) {
           if ($i%4 == 0) {
           ?>
@@ -152,6 +153,7 @@ function getInitals($name) {
           </div>
           <?php
         }
+
         ?>
       </div>
       <div class="social-icons bottom-hr">
