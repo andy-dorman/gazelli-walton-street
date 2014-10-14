@@ -122,9 +122,9 @@ function sendEmail($email, $code, $goal) {
 	$message .= '</tr>';
 	$message .= '<tr>';
 	$message .= '<td style="text-align: center; padding-top: 10px;">';
-	$message .= '<a href="http://www.twitter.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: block" src="http://walton-street.aomegasolutions.com/images/email/icon-twitter.png" alt="Twitter" title="Twitter"/></a>';
-	$message .= '<a href="http://www.facebook.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: block" src="http://walton-street.aomegasolutions.com/images/email/icon-facebook.png" alt="Facebook" title="Facebook"/></a>';
-	$message .= '<a href="http://www.instagram.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: block" src="http://walton-street.aomegasolutions.com/images/email/icon-instagram.png" alt="Instagram" title="Instagram"/></a>';
+	$message .= '<a href="http://www.twitter.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-twitter.png" alt="Twitter" title="Twitter"/></a>';
+	$message .= '<a href="http://www.facebook.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-facebook.png" alt="Facebook" title="Facebook"/></a>';
+	$message .= '<a href="http://www.instagram.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-instagram.png" alt="Instagram" title="Instagram"/></a>';
 	$message .= '</td>';
 	$message .= '</tr>';
 	$message .= '</table>';
