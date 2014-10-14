@@ -3,7 +3,7 @@
         fixed		: true,
         enableEscapeButton : true,
         overlayShow : true,
-		fitToView	: true,
+		fitToView	: false,
 		autoSize	: true,
 		closeClick	: true,
 		closeBtn	: false,
