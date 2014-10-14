@@ -137,10 +137,8 @@ function getInitals($name) {
 
         }
         $modCount = $count%4;
-        echo '<h1>'.$modCount.'</h1>';
         $count = $modCount + (5 - $modCount);
-        echo '<h1>'.$count.'</h1>';
-        for($i = $modCount; $i > 0; $i--) {
+        for($i = $count; $i > 0; $i--) {
           if ($i%4 == 0) {
           ?>
           </div>
