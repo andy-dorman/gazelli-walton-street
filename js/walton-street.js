@@ -4,13 +4,15 @@
         enableEscapeButton : true,
         overlayShow : true,
 		fitToView	: false,
-		autoSize	: true,
+		autoSize	: false,
 		closeClick	: true,
 		closeBtn	: false,
 		openEffect	: 'none',
 		closeEffect	: 'none',
 		scrolling	: 'yes',
 		width 		: 450, 
+		minWidth 	: 450,
+		height 		: 250,
         padding		: 0,
 		helpers : { 
 			overlay: {
