@@ -227,8 +227,8 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	$initials = "";
 	$expName = explode(" ", $name);
 	if (count($expName) > 1) {
-		$initals .= substr($expName[0], 0, 1);
-		$initals .= substr($expName[(count($expName) - 1)], 0, 1);
+		$initials .= substr($expName[0], 0, 1);
+		$initials .= substr($expName[(count($expName) - 1)], 0, 1);
 	} else {
 		$initials .= substr($expName[0], 0, 2);
 	}
