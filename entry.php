@@ -24,7 +24,7 @@ function sendEmail($email, $code, $goal) {
 	$message .= '<div style="margin: 0; padding: 0;">';
 	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
 	$message .= '<tr>';
-	$message .= '<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; background: transparent url(images/email/top.png) left top no-repeat; text-align: center;" valign="top">';
+	$message .= '<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://walton-street.aomegasolutions.com/images/email/top.png) left top no-repeat; text-align: center;" valign="top">';
 	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
 	$message .= '<tr>';
 	$message .= '<td width="220"></td>';
@@ -64,7 +64,7 @@ function sendEmail($email, $code, $goal) {
 	$message .= '<td width="348"><img src="http://walton-street.aomegasolutions.com/images/email/right.png"/></td>';
 	$message .= '</tr>';
 	$message .= '<tr>';
-	$message .= '<td colspan="3" width="800" height="745" valign="top" style="background: transparent url(images/email/bottom.png) left top no-repeat">';
+	$message .= '<td colspan="3" width="800" height="745" valign="top" style="background: transparent url(http://walton-street.aomegasolutions.com/images/email/bottom.png) left top no-repeat">';
 	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
 	$message .= '<tr>';
 	$message .= '<td style="padding-top: 50px;">';
