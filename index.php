@@ -136,8 +136,8 @@ function getInitals($name) {
           mysql_free_result($result);
 
         }
-        $modCount = $count%4;
-        $count = $modCount + (5 - $modCount);
+        $modCount = 4 - $count%4;
+        $count = $modCount + 4;
         for($i = $count; $i > 0; $i--) {
           if ($i%4 == 0) {
           ?>
