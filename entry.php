@@ -8,7 +8,7 @@
 require 'lib/db.php';
 $out = array();
 
-function sendEmail($email, $code, $goal) {
+function sendEmail($email, $code, $goal, $name) {
 	$to = strip_tags($email);
 
 	$subject = 'Thank you for your goal';
@@ -106,7 +106,7 @@ function sendEmail($email, $code, $goal) {
 	$message .= '</tr>';
 	$message .= '<tr>';
 	$message .= '<td width="10"></td>';
-	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">Laura Sarao 07.10.14</td>';
+	$message .= '<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \'Bodoni MT\', Didot, \'Didot LT STD\', \'Hoefler Text\', Garamond, \'Times New Roman\', serif; color: #8F4D51;">'.$name.' 07.10.14</td>';
 	$message .= '<td width="10"></td>';
 	$message .= '</tr>';
 	$message .= '</table>';
@@ -122,9 +122,9 @@ function sendEmail($email, $code, $goal) {
 	$message .= '</tr>';
 	$message .= '<tr>';
 	$message .= '<td style="text-align: center; padding-top: 10px;">';
-	$message .= '<a href="http://www.twitter.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-twitter.png" alt="Twitter" title="Twitter"/></a>';
-	$message .= '<a href="http://www.facebook.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-facebook.png" alt="Facebook" title="Facebook"/></a>';
-	$message .= '<a href="http://www.instagram.com" style="margin-left: 4px; margin-right: 4px;"><img style="display: inline-block" src="http://walton-street.aomegasolutions.com/images/email/icon-instagram.png" alt="Instagram" title="Instagram"/></a>';
+	$message .= '<a href="http://www.twitter.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-twitter.png" alt="Twitter" title="Twitter"/></a>';
+	$message .= '<a href="http://www.facebook.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-facebook.png" alt="Facebook" title="Facebook"/></a>';
+	$message .= '<a href="http://www.instagram.com" style="margin-left: 4px; margin-right: 4px;"><img src="http://walton-street.aomegasolutions.com/images/email/icon-instagram.png" alt="Instagram" title="Instagram"/></a>';
 	$message .= '</td>';
 	$message .= '</tr>';
 	$message .= '</table>';
@@ -269,7 +269,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		<a href="#ok" id="oklink">OK</a>
 		</div>';
 
-		sendEmail($email, $code, $goal);
+		sendEmail($email, $code, $goal, $name);
 	} else {
 		$out["result"] = mysql_error();
 	}
