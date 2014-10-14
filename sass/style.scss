@@ -120,12 +120,16 @@ header {
 		padding: 				0;
 		position: 				relative;
 
-		& div {
+		& > div {
 			position: 			absolute;
 			top: 				0px;
 			clip: 				rect(178px, 500px, 178px, 0px);
-			@include 			transition(all 0.2s ease-in-out);
-			//transition: 		all 0.2s ease-in-out;
+			//@include 			transition(all 0.2s ease-in-out);
+			-moz-transition: 	all 0.2s ease-in-out;
+			-o-transition: 		all 0.2s ease-in-out;
+			-ms-transition: 	all 0.2s ease-in-out;
+			-webkit-transition:	all 0.2s ease-in-out;
+			transition: 		all 0.2s ease-in-out;
 			height: 			100%;
 			width:				100%;
 			background-color: 	$brand-primary;
@@ -153,7 +157,7 @@ header {
 			background-image:			url('../images/key-tag-lock-in.png');
 			cursor:						pointer;
 
-			& div {
+			& > div {
 				background-image: 		url('../images/key-tag-lock-in.png');
 				background-position:	center -178px;
 				background-repeat:		no-repeat;
@@ -184,7 +188,7 @@ header {
 			@include                transform(translate3d(-44%, -20%, 0));
 		}
 
-		&:hover div {
+		&:hover > div {
 			clip: 				rect(0px, 500px, 178px, 0px);
 			opacity: 			1;
 		}
@@ -194,7 +198,7 @@ header {
 		}
 
 		& ~ .key-panel {
-			& div {
+			& > div {
 				left:				1px;
 				padding-right: 		1px;
 			}

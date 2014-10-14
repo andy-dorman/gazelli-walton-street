@@ -126,8 +126,10 @@ function getInitals($name) {
             <div class="key-panel col-sm-3 goal">
               <h4><?php echo getInitals($row['name']);?></h4>
               <div>
+                <div>
                 <h4 class="text-uppercase text-center">My goal is to</h4>
                 <p class="text-center"><?php echo $row['goal']; ?></p>
+                </div>
               </div>
             </div>
             <?php
