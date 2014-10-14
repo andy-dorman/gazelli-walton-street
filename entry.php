@@ -25,7 +25,7 @@ function sendEmail($email, $code, $goal) {
 	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
 	$message .= '<tr>';
 	$message .= '<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: \'Century Gothic\', CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://walton-street.aomegasolutions.com/images/email/top.png) left top no-repeat; text-align: center;" valign="top">';
-	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800">';
+	$message .= '<table cellpadding="0" cellspacing="0" border="0" width="800" height="210">';
 	$message .= '<tr>';
 	$message .= '<td width="220"></td>';
 	$message .= '<td align="center" width="360">';
@@ -59,9 +59,9 @@ function sendEmail($email, $code, $goal) {
 	$message .= '</td>';
 	$message .= '</tr>';
 	$message .= '<tr>';
-	$message .= '<td width="348"><img src="http://walton-street.aomegasolutions.com/images/email/left.png"/></td>';
-	$message .= '<td width="104"><img src="http://walton-street.aomegasolutions.com/images/email_codes/'.$code.'.png" alt="Your code" /></td>';
-	$message .= '<td width="348"><img src="http://walton-street.aomegasolutions.com/images/email/right.png"/></td>';
+	$message .= '<td width="348" height="45"><img src="http://walton-street.aomegasolutions.com/images/email/left.png"/></td>';
+	$message .= '<td width="104" height="45"><img src="http://walton-street.aomegasolutions.com/images/email_codes/'.$code.'.png" alt="Your code" /></td>';
+	$message .= '<td width="348" height="45"><img src="http://walton-street.aomegasolutions.com/images/email/right.png"/></td>';
 	$message .= '</tr>';
 	$message .= '<tr>';
 	$message .= '<td colspan="3" width="800" height="745" valign="top" style="background: transparent url(http://walton-street.aomegasolutions.com/images/email/bottom.png) left top no-repeat">';
