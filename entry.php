@@ -61,7 +61,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "</tr>";
 	$message .= "<tr>";
 	$message .= "<td width='348' height='45'><img style='display: block' src='http://walton-street.aomegasolutions.com/images/email/left.png'/></td>";
-	$message .= "<td width='104' height='45'><img style='display: block' src='";
+	$message .= "<td width='104' height='45'><img style='display: block' width='104' height='45' src='";
 	$message .= "http://walton-street.aomegasolutions.com/images/email_codes/".$code.".png";
 	$message .= "' alt='Your code' /></td>";
 	$message .= "<td width='348' height='45'><img style='display: block' src='http://walton-street.aomegasolutions.com/images/email/right.png'/></td>";
@@ -121,8 +121,8 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "<td width='260' style='padding-top: 20px;'>";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260'>";
 	$message .= "<tr>";
-	$message .= "<td width='260' style='text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA;'>";
-	$message .= "Share the Walton Secret with your friends and help them find their key";
+	$message .= "<td width='260' style='text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px;'>";
+	$message .= "<p style='font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'><a href='http://walton-street.aomegasolutions.com/images/email_codes/".$code.".png'>image</a>Share the Walton Secret with your friends and help them find their key</p>";
 	$message .= "</td>";
 	$message .= "</tr>";
 	$message .= "<tr>";
