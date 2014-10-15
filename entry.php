@@ -21,7 +21,14 @@ function sendEmail($email, $code, $goal, $name) {
 	$headers .= "X-Mailer: MIME-Mail v0.03, 20070419\r\n";
 	$message = "";
 	$message .= "<html>";
+	$message .= "<head>";
 	$message .= "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
+	$message .= "<style>";
+	$message .= "p a {";
+	$message .= "color: #FFFFFF;";
+	$message .= "}";
+	$message .= "</style>";
+	$message .= "</head>";
 	$message .= "<body style='margin: 0; padding: 0;'>";
 	$message .= "<div style='margin: 0; padding: 0;'>";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>";
@@ -32,7 +39,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "<td width='220'></td>";
 	$message .= "<td align='center' width='360'>";
 	$message .= "<p style='color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>";
-	$message .= "if it does not display properly <a href='http://walton-street.aomegasolutions.com/test-email.html' style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>click here</a> to view it in your browser</p>";
+	$message .= "if it does not display properly <a style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;' href='http://walton-street.aomegasolutions.com/test-email.html' >click here</a> to view it in your browser</p>";
 	$message .= "<td width='220'></td>";
 	$message .= "</tr>";
 	$message .= "<tr>";
