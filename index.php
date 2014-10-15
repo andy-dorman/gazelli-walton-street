@@ -139,9 +139,7 @@ function getInitals($name) {
 
         }
 
-        $modCount = 4 - $count%4;
-        $count = floor($count/4) + 92 + $modCount + 4;
-        for($i = $count; $i > 0; $i--) {
+        for($i = $count; $i < 100; $i++) {
           if ($i%4 == 0) {
           ?>
           </div>
@@ -159,9 +157,9 @@ function getInitals($name) {
       <div class="social-icons bottom-hr">
         <ul class="list-inline text-center">
             <li>share on</li>
-            <li class="social-icon twitter"><a href="www.twitter.com"></a></li>
-            <li class="social-icon facebook"><a href="www.facebook.com"></a></li>
-            <li class="social-icon email"><a href="www.email.com"></a></li>
+            <li class="social-icon twitter"><a href="https://www.twitter.com/waltonsecret"></a></li>
+            <li class="social-icon facebook"><a href="https://www.facebook.com/waltonsecret"></a></li>
+            <li class="social-icon email"><a href="https://www.instagram.com/waltonsecret"></a></li>
             <li>@walton street</li>
           </ul>
       </div>

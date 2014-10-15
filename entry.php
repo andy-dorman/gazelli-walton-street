@@ -117,7 +117,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='10'></td>\n";
-	$message .= "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$name." 07.10.14</td>\n";
+	$message .= "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$name." ".date_format(date_create(), 'd.m.y')."</td>\n";
 	$message .= "<td width='10'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
@@ -135,9 +135,9 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td style='text-align: center; padding-top: 10px;'>\n";
-	$message .= "<a href='http://www.twitter.com' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-twitter.png' alt='Twitter' title='Twitter'/></a>\n";
-	$message .= "<a href='http://www.facebook.com' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-facebook.png' alt='Facebook' title='Facebook'/></a>\n";
-	$message .= "<a href='http://www.instagram.com' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-instagram.png' alt='Instagram' title='Instagram'/></a>\n";
+	$message .= "<a href='https://www.twitter.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-twitter.png' alt='Twitter' title='Twitter'/></a>\n";
+	$message .= "<a href='https://www.facebook.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-facebook.png' alt='Facebook' title='Facebook'/></a>\n";
+	$message .= "<a href='https://www.instagram.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://walton-street.aomegasolutions.com/images/email/icon-instagram.png' alt='Instagram' title='Instagram'/></a>\n";
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
@@ -274,9 +274,9 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		$out["thanks"] = '<div class="thankyou"><h3>Congratulations for locking in your goal</h3>
 		<div class="social-icons">
 			<ul class="list-inline text-center">
-				<li class="social-icon twitter dark"><a href="www.twitter.com"></a></li>
-				<li class="social-icon facebook dark"><a href="www.facebook.com"></a></li>
-				<li class="social-icon email dark"><a href="www.email.com"></a></li>
+				<li class="social-icon twitter dark"><a href="https://www.twitter.com/waltonsecret"></a></li>
+				<li class="social-icon facebook dark"><a href="https://www.facebook.com/waltonsecret"></a></li>
+				<li class="social-icon email dark"><a href="https://www.instagram.com/waltonsecret"></a></li>
 			</ul>
 		</div>
 		<p class="text-center">Share the Walton Secret with your friends and let them find their key</p>

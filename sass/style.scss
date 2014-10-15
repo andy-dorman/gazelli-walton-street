@@ -14,7 +14,7 @@ $lock-in-text-height: 			40px;
 
 body {
 	letter-spacing:				$letter-spacing;
-	background: 				url('../images/flower-bg.jpg') center top no-repeat;
+	background: 				#333 url('../images/flower-bg.jpg') center top no-repeat;
 	background-size:			100%;
 }
 
@@ -37,7 +37,7 @@ p {
 	padding-bottom: 			20px;
 	margin-bottom: 				0;
 	padding-top:				28px;
-	box-shadow:					0px 0px 30px 20px rgba(10, 10, 10, 0.8);
+	box-shadow:					0px 0px 30px 20px rgba(10, 10, 10, 0.4);
 }
 
 .bottom-hr {
@@ -201,6 +201,9 @@ header {
 			& > div {
 				left:				1px;
 				padding-right: 		1px;
+				& div {
+
+				}
 			}
 
 			&:after,
