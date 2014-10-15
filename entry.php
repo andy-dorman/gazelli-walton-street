@@ -32,7 +32,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "<td width='220'></td>";
 	$message .= "<td align='center' width='360'>";
 	$message .= "<p style='color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>";
-	$message .= "if it does not display properly <a href='http://walton-street.aomegasolutions.com/test-email.html' style='color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>click here</a> to view it in your browser</p>";
+	$message .= "if it does not display properly <a href='http://walton-street.aomegasolutions.com/test-email.html' style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>click here</a> to view it in your browser</p>";
 	$message .= "<td width='220'></td>";
 	$message .= "</tr>";
 	$message .= "<tr>";
