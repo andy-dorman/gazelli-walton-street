@@ -7,7 +7,7 @@ $detect = new Mobile_Detect;
 if($detect->isMobile()) {
   $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,23;";
 } else {
-  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,3;";  
+  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,99;";  
 }
 
   
@@ -57,6 +57,7 @@ function getInitals($name) {
 
   </head>
   <body>
+  <a href="#" name="top"></a>
     <div class="container">
     <div>
       <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -156,7 +157,7 @@ function getInitals($name) {
           $rows = 1;
         }
         $rowCount = 0;
-        for($i = $count; $i < 100; $i++) {
+        for($i = $count; $i < 110; $i++) {
           if ($i%4 == 0) {
             if($rowCount == 1) {
               break;
