@@ -2,6 +2,9 @@
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
 require 'lib/db.php';
+if(!$_GET['user']) {
+	die();
+}
 $query = "SELECT * FROM customers WHERE ID = ".$_GET['user'];
 mysql_query($query);
 
@@ -34,7 +37,7 @@ if($result = mysql_query($query)) {
 							<td width="260"></td>
 						</tr>
 						<tr>
-							<td height="55" colspan="3"></td>
+							<td height="65" colspan="3"></td>
 						</tr>
 						<tr>
 							<td width="360"></td>
@@ -91,12 +94,12 @@ if($result = mysql_query($query)) {
 											<table cellpadding="0" cellspacing="0" border="0" width="260" style="border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;">
 												<tr>
 													<td width="10"></td>
-													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php $row['goal']?></td>
+													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo $row['goal']?></td>
 													<td width="10"></td>
 												</tr>
 												<tr>
 													<td width="10"></td>
-													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo $row['name'].' '.date_format($row['created_at'], 'd.m.y'); ?></td>
+													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo $row['name'].' '.date('d.m.y', strtotime($row['created_at'])); ?></td>
 													<td width="10"></td>
 												</tr>
 											</table>
@@ -130,3 +133,7 @@ if($result = mysql_query($query)) {
 		</table>
 	</div>
 </body></html>
+<?php
+}
+}
+?>
