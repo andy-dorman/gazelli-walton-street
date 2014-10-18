@@ -49,9 +49,9 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</td>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
-	//$message .= "<tr>\n";
-	//$message .= "<td height='55' colspan='3'></td>\n";
-	//$message .= "</tr>\n";
+	$message .= "<tr>\n";
+	$message .= "<td height='10' colspan='3'></td>\n";
+	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='360'></td>\n";
 	$message .= "<td align='center' width='80'>\n";
