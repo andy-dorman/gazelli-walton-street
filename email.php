@@ -53,7 +53,7 @@ if($result = mysql_query($query)) {
 			</tr>
 			<tr>
 				<td width="348"><img src="images/email/left.png"/></td>
-				<td width="104"><img src="images/email_codes/<?php $row['code']?>.png" alt="Your code" /></td>
+				<td width="104"><img src="images/email_codes/<?php echo $row['code']?>.png" alt="Your code" /></td>
 				<td width="348"><img src="images/email/right.png"/></td>
 			</tr>
 			<tr>
