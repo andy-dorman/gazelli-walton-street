@@ -55,7 +55,7 @@ if($detect->isMobile() || $detect->isTablet()) {
 ?>
 <script type="text/javascript">
 $(document.ready)(function(){
-  $('.key-panel.goal').on("click", function(){
+  $('.key-panel.goal').on("touchstart", function(){
     $('.key-panel.goal').removeClass("hover");
     $(this).addClass("hover");
   });
