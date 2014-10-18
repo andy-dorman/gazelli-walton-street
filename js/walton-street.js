@@ -43,6 +43,9 @@
 					closeEffect	: 'none',
 					scrolling	: 'yes',
 	                padding		: 0,
+	                afterClose	: function(){
+		                $(window).trigger('fancyboxClosed');
+		            },
 	                helpers 	: { 
 						overlay: {
 							css: {'background': 'rgba(0,0,0,0.8)'} // or your preferred hex color value
@@ -64,15 +67,13 @@
 			                <h4 class="text-uppercase text-center">My goal is to</h4>
 			                <p class="text-center">' + response['goal'] + '</p>
 			                </div></div>');
-	                    $.fancybox({
-	                    	afterClose: function(){
-			                    	$(".key-panel:not(.goal):not(.lock-in)").first().replaceWith(firstPanel);
-				                    $(".key-panel.lock-in").next().replaceWith(newGoal);
-				                }
-				        });
+	                    $(window).off('fancyboxClosed');
+	                    $(window).on('fancyboxClosed', function(){
+	                    	$(".key-panel:not(.goal):not(.lock-in)").first().replaceWith(firstPanel);
+		                    $(".key-panel.lock-in").next().replaceWith(newGoal);
+	                    });
 	                    $("#oklink").click(function (e) {
 	                        e.preventDefault();
-
 	                        $.fancybox.close();
 	                    });
 
