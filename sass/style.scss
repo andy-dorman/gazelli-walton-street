@@ -188,7 +188,8 @@ header {
 			@include                transform(translate3d(-44%, -20%, 0));
 		}
 
-		&:hover > div {
+		&:hover > div,
+		&.hover > div {
 			clip: 				rect(0px, 500px, 178px, 0px);
 			opacity: 			1;
 		}
