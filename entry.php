@@ -38,7 +38,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<tr>\n";
 	$message .= "<td width='220'></td>\n";
 	$message .= "<td align='center' width='360'>\n";
-	$message .= "<p style='color: #ffffff; font-size: 8px; padding-top: 0px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
+	$message .= "<p style='color: #ffffff; font-size: 8px; margin-top: 2px; padding-top: 0px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
 	$message .= "if it does not display properly <a style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;' href='http://waltonsecret.com/email.php?user=".$id."' >click here</a> to view it in your browser</p>\n";
 	$message .= "<td width='220'></td>\n\n";
 	$message .= "</tr>\n";
