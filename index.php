@@ -55,9 +55,9 @@ if($detect->isMobile() || $detect->isTablet()) {
 ?>
 <script type="text/javascript">
 $(document.ready)(function(){
-  $('key-panel.goal').click(function(){
-    $('key-panel.goal').blur();
-    this.focus();
+  $('key-panel.goal').live("click", function(){
+    $('key-panel.goal').trigger("blur");
+    $(this).trigger("focus");
   });
 })
 </script>
