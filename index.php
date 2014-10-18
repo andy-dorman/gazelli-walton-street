@@ -39,7 +39,7 @@ function getInitals($name) {
 <meta name="keywords" content="">
 <meta name="author" content="">
 
-<title>Gazelli Keys</title>
+<title>Walton Secret</title>
 
 <!-- Bootstrap core CSS -->
 <link href="stylesheets/style.css" rel="stylesheet">
@@ -53,12 +53,14 @@ function getInitals($name) {
 <?php
 if($detect->isMobile() || $detect->isTablet()) {
 ?>
+<script type="text/javascript">
 $(document.ready)(function(){
   $('key-panel.goal').click(function(){
     $('key-panel.goal').blur();
     this.focus();
   });
 })
+</script>
 <?php
 }
 ?>
