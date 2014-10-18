@@ -5,9 +5,9 @@ require 'lib/db.php';
 require 'lib/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 if($detect->isMobile()) {
-  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,24;";
+  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,23;";
 } else {
-  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,100;";  
+  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,3;";  
 }
 
   
