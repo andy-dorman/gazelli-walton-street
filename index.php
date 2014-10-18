@@ -2,8 +2,14 @@
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
 require 'lib/db.php';
+require 'lib/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if($detect->isMobile()) {
+  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,24;";
+} else {
+  $query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,100;";  
+}
 
-$query = "SELECT * FROM customers ORDER BY RAND() LIMIT 0,13;";
   
 //$result = $mysqli->query($query);
 $result = mysql_query($query);
@@ -138,13 +144,28 @@ function getInitals($name) {
           mysql_free_result($result);
 
         }
+        if($detect->isMobile()) {
+          $limit = 24;
+        } else {
+          $limit = 100;
+        }
 
+        if($count == $limit) {
+          $rows = 1;
+        } else {
+          $rows = 2;
+        }
+        $rowCount = 0;
         for($i = $count; $i < 100; $i++) {
           if ($i%4 == 0) {
+            if($rowCount == $rows) {
+              break;
+            }
           ?>
           </div>
           <div class="key-panel-row bottom-hr">
           <?php
+          $rowCount++;
           }
           ?>
           <div class="key-panel col-sm-3">
