@@ -212,15 +212,18 @@ function getInitals($name) {
 if($detect->isMobile() || $detect->isTablet()) {
 ?>
 <script type="text/javascript">
-
-$(document).ready(function(){
+function mobileclickToHover() {
   $('.key-panel.goal').each(function(index, value) {
+    $(value).unbind("click");
     $(value).on("click", function(){
       $('.key-panel.goal').removeClass("hover");
       $(this).addClass("hover");
     });
   });
-})
+}
+$(document).ready(function(){
+  mobileclickToHover();
+});
 </script>
 <?php
 }
