@@ -61,7 +61,7 @@ $(document.ready)(function(){
       alert("hover");
       $('.key-panel.goal').removeClass("hover");
       $(this).addClass("hover");
-      );
+    });
   });
 })
 </script>
