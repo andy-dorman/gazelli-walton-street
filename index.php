@@ -54,8 +54,10 @@ function getInitals($name) {
 if($detect->isMobile() || $detect->isTablet()) {
 ?>
 <script type="text/javascript">
+alert("pseudo hover");
 $(document.ready)(function(){
   $('.key-panel.goal').on("touchstart", function(){
+    alert("hover");
     $('.key-panel.goal').removeClass("hover");
     $(this).addClass("hover");
   });
