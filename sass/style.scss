@@ -333,7 +333,7 @@ footer {
 	width:								340px;
 	padding: 							4px 20px 20px;
 
-	&.social-icons > ul {
+	& .social-icons > ul {
 		@include						transform(translateX(-50%));
 		margin-bottom: 10px;
 	}
