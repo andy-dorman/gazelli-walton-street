@@ -1,3 +1,13 @@
+<?php
+ini_set('display_errors',1); 
+error_reporting(E_ALL);
+require 'lib/db.php';
+$query = "SELECT * FROM customers WHERE ID = ".$_GET['user'];
+mysql_query($query);
+
+if($result = mysql_query($query)) {
+	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+?>
 <html>
 <body style="margin: 0; padding: 0;">
 	<div style="margin: 0; padding: 0;">
@@ -9,7 +19,7 @@
 							<td width="220"></td>
 							<td align="center" width="360">
 								<p style="color: #ffffff; font-size: 8px; padding-top: 10px; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-								if it does not display properly <a href="" style="color: #ffffff; font-size: 8px; padding-top: 10px; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">click here</a> to view it in your browser</p>
+								</p>
 							<td width="220"></td>
 						</tr>
 						<tr>
@@ -40,7 +50,7 @@
 			</tr>
 			<tr>
 				<td width="348"><img src="images/email/left.png"/></td>
-				<td width="104"><img src="images/email_codes/UCLS.png" alt="Your code" /></td>
+				<td width="104"><img src="images/email_codes/<?php $row['code']?>.png" alt="Your code" /></td>
 				<td width="348"><img src="images/email/right.png"/></td>
 			</tr>
 			<tr>
@@ -81,12 +91,12 @@
 											<table cellpadding="0" cellspacing="0" border="0" width="260" style="border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;">
 												<tr>
 													<td width="10"></td>
-													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;">Own a piece of art from an artist I admire.</td>
+													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php $row['goal']?></td>
 													<td width="10"></td>
 												</tr>
 												<tr>
 													<td width="10"></td>
-													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;">Laura Sarao 07.10.14</td>
+													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo $row['name'].' '.date_format($row['created_at'], 'd.m.y'); ?></td>
 													<td width="10"></td>
 												</tr>
 											</table>

@@ -8,7 +8,7 @@
 require "lib/db.php";
 $out = array();
 
-function sendEmail($email, $code, $goal, $name) {
+function sendEmail($email, $code, $goal, $name, $id) {
 	$to = strip_tags($email);
 
 	$subject = "Thank you for your goal";
@@ -39,7 +39,7 @@ function sendEmail($email, $code, $goal, $name) {
 	$message .= "<td width='220'></td>\n";
 	$message .= "<td align='center' width='360'>\n";
 	$message .= "<p style='color: #ffffff; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
-	$message .= "if it does not display properly <a style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;' href='http://waltonsecret.com/test-email.html' >click here</a> to view it in your browser</p>\n";
+	$message .= "if it does not display properly <a style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;' href='http://waltonsecret.com/email.php?user=".$id."' >click here</a> to view it in your browser</p>\n";
 	$message .= "<td width='220'></td>\n\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
@@ -283,7 +283,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		<a href="#ok" id="oklink">OK</a>
 		</div>';
 
-		sendEmail($email, $code, $goal, $name);
+		sendEmail($email, $code, $goal, $name, mysql_insert_id());
 	} else {
 		$out["result"] = mysql_error();
 	}
