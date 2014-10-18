@@ -214,8 +214,8 @@ if($detect->isMobile() || $detect->isTablet()) {
 <script type="text/javascript">
 
 $(document).ready(function(){
-  $('.key-panel.goal').each(function() {
-    $(this).live("click", function(){
+  $('.key-panel.goal').each(function(index, value) {
+    $(value).on("click", function(){
       $('.key-panel.goal').removeClass("hover");
       $(this).addClass("hover");
     });
