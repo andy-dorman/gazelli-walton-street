@@ -57,6 +57,15 @@
 	                // pre-submit callback 
 	                success: function (response) {
 	                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
+	                    var firstPanel = $(".key-panel.lock-in").next();
+	                    var newGoal = $('<div class="key-panel col-sm-3 goal">
+	                    	<h4>' + response['initials'] + '</h4>
+	                    	<div>
+			                <h4 class="text-uppercase text-center">My goal is to</h4>
+			                <p class="text-center">' + response['goal'] + '</p>
+			                </div></div>');
+	                    $(".key-panel:not(.goal):not(.lock-in)").first().replaceWith(firstPanel);
+	                    firstPanel.replaceWith(newGoal);
 
 	                    $("#oklink").click(function (e) {
 	                        e.preventDefault();
@@ -85,6 +94,7 @@
 	function countCharacters(obj, count) {
 	    $(obj).keydown(function (event) {
 	        if ($(obj).val().length >= count) {
+	        	alert("Your goal must be less than 250 characters long.")
 	            event.preventDefault();
 	        }
 	    });

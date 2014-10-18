@@ -135,7 +135,7 @@ function getInitals($name) {
               <div>
                 <div>
                 <h4 class="text-uppercase text-center">My goal is to</h4>
-                <p class="text-center"><?php echo $row['goal']; ?></p>
+                <p class="text-center"><?php echo stripslashes($row['goal']); ?></p>
                 </div>
               </div>
             </div>
