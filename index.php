@@ -153,19 +153,19 @@ function getInitals($name) {
         if($count == $limit) {
           $rows = 1;
         } else {
-          $rows = 2;
+          $rows = 1;
         }
         $rowCount = 0;
         for($i = $count; $i < 100; $i++) {
           if ($i%4 == 0) {
-            if($rowCount == $rows) {
+            if($rowCount == 1) {
               break;
             }
           ?>
           </div>
           <div class="key-panel-row bottom-hr">
           <?php
-          $rowCount++;
+            $rowCount++;
           }
           ?>
           <div class="key-panel col-sm-3">
