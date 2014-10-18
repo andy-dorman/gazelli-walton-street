@@ -50,7 +50,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td height='20' colspan='3'></td>\n";
+	$message .= "<td height='55' colspan='3'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='360'></td>\n";
