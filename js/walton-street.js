@@ -79,7 +79,7 @@
 	                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
 	                    		var lastLockIn = $(".key-panel.lock-in").last().clone();
 	                    		$(".key-panel.lock-in").last().parent().children().last().remove();
-	                    		$(".key-panel").last().parent().children().first().after(lastLockIn);
+	                    		$(".key-panel").last().parent().children().first().before(lastLockIn);
 	                    	}
 		                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
 	                    });
