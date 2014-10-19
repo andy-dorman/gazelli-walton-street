@@ -69,8 +69,8 @@
 			                </div></div>');
 	                    $(window).off('fancyboxClosed');
 	                    $(window).on('fancyboxClosed', function(){
-	                    	$(".key-panel:not(.goal):not(.lock-in)").first().replaceWith(firstPanel);
-		                    $(".key-panel.lock-in").next().replaceWith(newGoal);
+	                    	$(".key-panel.lock-in").last().next().replaceWith(firstPanel);
+		                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
 	                    });
 	                    $("#oklink").click(function (e) {
 	                        e.preventDefault();

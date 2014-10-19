@@ -168,10 +168,24 @@ function getInitals($name) {
           <?php
             $rowCount++;
           }
+          if($i === 0) {}
           ?>
+          <div class="key-panel col-sm-3 lock-in">
+              <p class="text-uppercase text-center">
+              Lock in your goal
+              </p>
+              <div>
+                <p class="text-uppercase text-center">
+                Lock in your goal
+                </p>
+              </div>
+          </div>
+          <?php
+          } else {?>
           <div class="key-panel col-sm-3">
           </div>
           <?php
+          }
         }
 
         ?>
