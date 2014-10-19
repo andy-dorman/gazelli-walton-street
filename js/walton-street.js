@@ -60,7 +60,7 @@
 	                // pre-submit callback 
 	                success: function (response) {
 	                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
-	                    var firstPanel = $(".key-panel.lock-in").next().clone();
+	                    var firstPanel = $(".key-panel.lock-in").first().next().clone();
 	                    var newGoal = $('<div class="new-goal key-panel col-sm-3 goal">
 	                    	<h4>' + response['initials'] + '</h4>
 	                    	<div>
@@ -69,7 +69,17 @@
 			                </div></div>');
 	                    $(window).off('fancyboxClosed');
 	                    $(window).on('fancyboxClosed', function(){
-	                    	$(".key-panel.lock-in").last().next().replaceWith(firstPanel);
+	                    	// remove first blank panel
+	                    	//
+	                    	$(".key-panel:not(.lock-in):not(.goal)").first().remove();
+	                    	// insert the firstPanel before the last lock-in
+	                    	//
+	                    	$(".key-panel.lock-in").last().insertBefore(firstPanel);
+	                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
+	                    		var lastLockIn = $(".key-panel.lock-in").last().parent().children().last().clone();
+	                    		$(".key-panel.lock-in").last().parent().children().last().remove();
+	                    		$(".key-panel").last().parent().children().first().replaceWith(lastLockIn);
+	                    	}
 		                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
 	                    });
 	                    $("#oklink").click(function (e) {
