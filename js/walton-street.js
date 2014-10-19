@@ -76,7 +76,7 @@
 	                    	//
 	                    	$(".key-panel.lock-in").last().insertBefore(firstPanel);
 	                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
-	                    		var lastLockIn = $(".key-panel.lock-in").last().parent().children().last().clone();
+	                    		var lastLockIn = $(".key-panel.lock-in").last().clone();
 	                    		$(".key-panel.lock-in").last().parent().children().last().remove();
 	                    		$(".key-panel").last().parent().children().first().replaceWith(lastLockIn);
 	                    	}
