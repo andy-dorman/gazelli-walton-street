@@ -60,6 +60,7 @@
 	                // pre-submit callback 
 	                success: function (response) {
 	                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
+	                    $('.key-panel').removeClass('new-goal');
 	                    var firstPanel = $(".key-panel.lock-in").first().next().clone();
 	                    var newGoal = $('<div class="new-goal key-panel col-sm-3 goal">
 	                    	<h4>' + response['initials'] + '</h4>
@@ -78,7 +79,7 @@
 	                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
 	                    		var lastLockIn = $(".key-panel.lock-in").last().clone();
 	                    		$(".key-panel.lock-in").last().parent().children().last().remove();
-	                    		$(".key-panel").last().parent().children().first().replaceWith(lastLockIn);
+	                    		$(".key-panel").last().parent().children().first().after(lastLockIn);
 	                    	}
 		                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
 	                    });
