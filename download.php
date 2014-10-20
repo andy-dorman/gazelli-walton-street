@@ -33,7 +33,7 @@ if($result = mysql_query($query)) {
 	$data = "";
 	$data = "name\temail\tgoal\tcode\tentry-date\n";
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-		$data .= $query = $row['name']."\t".$row['email']."\t".stripslashes(stripslashes($row['goal']))."\t".$row['code'].$row['created_at']."\n";
+		$data .= $query = $row['name']."\t".$row['email']."\t".stripslashes($row['goal'])."\t".$row['code'].$row['created_at']."\n";
 	$num_records++;
 	}
 
@@ -44,7 +44,7 @@ if($result = mysql_query($query)) {
 
 if($result = mysql_query($pagedquery)) {
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-		$rows .= '<tr><td><input type="checkbox" name="entry_id[]" value="'.$row['id'].'"/></td><td>'.$row['name'].'</td><td>'.$row['email'].'</td><td>'.$row['goal'].'</td><td>'.$row['code'].'</td><td>'.$row['created_at'].'</td></tr>';
+		$rows .= '<tr><td><input type="checkbox" name="entry_id[]" value="'.$row['id'].'"/></td><td>'.$row['name'].'</td><td>'.$row['email'].'</td><td>'.stripslashes($row['goal']).'</td><td>'.$row['code'].'</td><td>'.$row['created_at'].'</td></tr>';
 	}
 }
 
