@@ -78,7 +78,7 @@ h2 {
 }
 .intro-text {
 	font-size:					13px;
-	letter-spacing:				0px;
+	letter-spacing:				$letter-spacing;
 }
 .separator {
 	display: 					inline-block;
@@ -571,5 +571,11 @@ footer {
 
 	& a {
 		text-decoration:				underline;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 750px;
 	}
 }

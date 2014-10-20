@@ -102,7 +102,7 @@ function getInitals($name) {
         </main>
 
         <div class="bottom-hr">
-          <h3 class="text-center"><a href="#" id="lock-in-link">LOCK IN YOUR GOAL & HANG YOUR KEY</a></h3>
+          <h3 class="text-center"><a href="#" id="lock-in-link">LOCK IN YOUR KEY & HANG YOUR GOAL</a></h3>
         </div>
       </div>
 
@@ -209,10 +209,10 @@ function getInitals($name) {
         <div>
           <ul class="list-inline pull-left">
             <li class="text-uppercase">Floral artwork:</li>
-            <li><a href="http://www.elliecashmandesign.com" class="text-uppercase">Ellie Cashman</a></li>
+            <li><a href="http://www.elliecashmandesign.com" class="text-uppercase" target="_blank">Ellie Cashman</a></li>
           </ul>
           <ul class="list-inline pull-right">
-            <li class="separator"><a href="tsandcs.html" class="fancybox fancybox.ajax text-uppercase">Terms & Conditions</a>
+            <li class="separator"><a href="tsandcs.html" class="fancybox fancybox.ajax text-uppercase">* Terms & Conditions</a>
           </ul>
         </div>
       </footer>
