@@ -18,6 +18,9 @@
 			<label for="goal">GOAL</label>
 			<textarea id="goal" name="goal" placeholder="My goal is to..."></textarea>
 		</div>
+		<div class="form-group">
+			<span id="character-count">120 character limit<span></span></span>
+		</div>
 		<div class="form-group clearfix">
 			<p class="col-xs-8 disclaimer">Any personal information is protected under the Data Protection Act 1998. We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so.</p>
 			<input class="submit col-xs-4 pull-right" type="submit" value="SUBMIT" />

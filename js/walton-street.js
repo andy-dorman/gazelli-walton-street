@@ -108,13 +108,17 @@
 	}
 	
 	function countCharacters(obj, count) {
-	    $(obj).keydown(function (e) {
+	    $(obj).keyup(function (e) {
 	    	if(e.keyCode != 46 || e.keyCode != 8) {
 		        if ($(obj).val().length >= count) {
 		        	alert("Your goal must be less than 120 characters long.")
 		            e.preventDefault();
 		        }
 		    }
+		    if($(obj).val().length > count) {
+		    	$(obj).val($(obj).val().substring(0, count));
+		    }
+		    $('#character-count > span').html(' - ' + $(obj).val().length)
 	    });
 	}
 
