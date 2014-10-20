@@ -307,7 +307,7 @@ footer {
 .social-icons {
 	& > ul {
 		position: 						relative;
-		@include                        transform(translateX(-51.8%));
+		@include                        transform(translateX(-52.4%));
 		left: 							50%;
 		margin-top:						16px;
 		margin-bottom:					0px;
@@ -482,7 +482,7 @@ footer {
 			}
 
 			& li:last-child {
-				margin-top:				4px;
+				margin-top:				8px;
 				margin-bottom:			0;
 			}
 		}
