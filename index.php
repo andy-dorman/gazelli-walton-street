@@ -102,7 +102,7 @@ function getInitals($name) {
         </main>
 
         <div class="bottom-hr">
-          <h3 class="text-center"><a href="#" id="lock-in-link">LOCK IN YOUR KEY & HANG YOUR GOAL</a></h3>
+          <h3 class="text-center"><a href="#" id="lock-in-link">LOCK IN YOUR GOAL & RECEIVE A GIFT FROM US*</a></h3>
         </div>
       </div>
 
