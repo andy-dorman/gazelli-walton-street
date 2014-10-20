@@ -180,6 +180,6 @@
 	$('#goto-top').bind('click', function(e){
 		e.preventDefault();
 		e.stopPropagation();
-		$('html, body').animate({scrollTop: $("#top").offset().top}, 2000);
+		$('html, body').animate({scrollTop: $("#top").offset().top}, 1000);
 	});
 })(jQuery)
