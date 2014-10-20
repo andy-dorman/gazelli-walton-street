@@ -3,7 +3,7 @@
 </head>
 <body>
 <div id="walton-street_entry">
-	<h3>Tell us your goal and we'll be in touch to help you achieve it sometime in the future</h3>
+	<h3>TELL US YOUR GOAL AND RECEIVE A SPECIAL GIFT AT OUR LAUNCH IN 2015</h3>
 	<form id="key_form" class="" action="entry.php" method="post">
 
 		<div class="form-group">
