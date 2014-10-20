@@ -75,7 +75,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='348' height='45'><img style='display: block' src='http://waltonsecret.com/images/email/right.png'/></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td colspan='3' width='800' height='745' valign='top' style='background: transparent url(http://waltonsecret.com/images/email/bottom.png) left top no-repeat'>\n";
+	$message .= "<td colspan='3' width='800' height='620' valign='top' style='background: transparent url(http://waltonsecret.com/images/email/bottom.png) left top no-repeat'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td style='padding-top: 50px;'>\n";

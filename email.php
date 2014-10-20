@@ -57,7 +57,7 @@ if($result = mysql_query($query)) {
 				<td width="348"><img src="images/email/right.png"/></td>
 			</tr>
 			<tr>
-				<td colspan="3" width="800" height="745" valign="top" style="background: transparent url(images/email/bottom.png) left top no-repeat">
+				<td colspan="3" width="800" height="620" valign="top" style="background: transparent url(images/email/bottom.png) left top no-repeat">
 					<table cellpadding="0" cellspacing="0" border="0" width="800">
 						<tr>
 							<td style="padding-top: 50px;">
