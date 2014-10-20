@@ -33,7 +33,7 @@ if($result = mysql_query($query)) {
 	$data = "";
 	$data = "name\temail\tgoal\tcode\tentry-date\n";
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-		$data .= $query = $row['name']."\t".$row['email']."\t".stripslashes($row['goal'])."\t".$row['code'].$row['created_at']."\n";
+		$data .= $query = $row['name']."\t".$row['email']."\t".stripslashes(stripslashes($row['goal']))."\t".$row['code'].$row['created_at']."\n";
 	$num_records++;
 	}
 
