@@ -220,9 +220,10 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	$out["invalid"] = "You can't access this page directly!!";
 	echo json_encode($out);
 } else {
+	/*
 	foreach ($_POST as $key => $value) { 
     	$_POST[$key] = mysql_real_escape_string($value); 
-  	}
+  	}*/
 		
 	$name = mysql_real_escape_string($_POST['name']);
 	$email = mysql_real_escape_string($_POST['email']);

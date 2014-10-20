@@ -108,11 +108,11 @@
 	}
 	
 	function countCharacters(obj, count) {
-	    $(obj).keydown(function (event) {
+	    $(obj).keydown(function (e) {
 	    	if(e.keyCode != 46 || e.keyCode != 8) {
 		        if ($(obj).val().length >= count) {
 		        	alert("Your goal must be less than 120 characters long.")
-		            event.preventDefault();
+		            e.preventDefault();
 		        }
 		    }
 	    });
