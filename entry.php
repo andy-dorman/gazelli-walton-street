@@ -284,7 +284,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		<a href="#ok" id="oklink">OK</a>
 		</div>';
 
-		sendEmail($email, $code, $goal, $name, mysql_insert_id());
+		sendEmail($email, $code, stripslashes($_POST['goal']), $name, mysql_insert_id());
 	} else {
 		$out["result"] = mysql_error();
 	}
