@@ -274,9 +274,9 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		$out["thanks"] = '<div class="thankyou"><h3>Congratulations for locking in your goal</h3>
 		<div class="social-icons">
 			<ul class="list-inline text-center">
-				<li class="social-icon twitter dark"><a href="https://www.twitter.com/WaltonSecret"></a></li>
-				<li class="social-icon facebook dark"><a href="https://www.facebook.com/WaltonSecret"></a></li>
-				<li class="social-icon email dark"><a href="https://www.instagram.com/walton_secret"></a></li>
+				<li class="social-icon twitter dark"><a href="https://www.twitter.com/WaltonSecret" target="_blank"></a></li>
+				<li class="social-icon facebook dark"><a href="https://www.facebook.com/WaltonSecret" target="_blank"></a></li>
+				<li class="social-icon email dark"><a href="https://www.instagram.com/walton_secret" target="_blank"></a></li>
 			</ul>
 		</div>
 		<p class="text-center">Share the Walton Secret with your friends and let them find their key</p>

@@ -193,9 +193,9 @@ function getInitals($name) {
       <div class="social-icons bottom-hr">
         <ul class="list-inline text-center">
             <li>inspire your friends</li>
-            <li class="social-icon twitter"><a href="https://www.twitter.com/WaltonSecret"></a></li>
-            <li class="social-icon facebook"><a href="https://www.facebook.com/WaltonSecret"></a></li>
-            <li class="social-icon email"><a href="https://www.instagram.com/walton_secret"></a></li>
+            <li class="social-icon twitter"><a href="https://www.twitter.com/WaltonSecret" target="_blank"></a></li>
+            <li class="social-icon facebook"><a href="https://www.facebook.com/WaltonSecret" target="_blank"></a></li>
+            <li class="social-icon email"><a href="https://www.instagram.com/walton_secret" target="_blank"></a></li>
             <li>share your goal</li>
           </ul>
       </div>

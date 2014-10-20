@@ -56,8 +56,6 @@ p {
 	}
 }
 
-
-
 .navbar-header {
 	float: 						none;
 	display: 					inline-block;
@@ -74,6 +72,10 @@ h2 {
 	text-transform: 			uppercase;
 }
 
+.disclaimer {
+	font-family: 				'Arial Narrow';
+	letter-spacing: 			0px;
+}
 .intro-text {
 	font-size:					13px;
 	letter-spacing:				0px;
@@ -164,7 +166,7 @@ header {
 			}
 
 			& h4 {
-				font-size:		20px;
+				font-size:		$font-size-h4;
 				margin-top:		12px;
 				margin-bottom:	6px;
 			}
@@ -359,7 +361,7 @@ footer {
 	z-index:							2000;
 	position:							relative;
 	background:							$brand_primary;
-	width:								340px;
+	width:								440px;
 	padding: 							4px 20px 20px;
 
 	& .social-icons > ul {
@@ -387,6 +389,7 @@ footer {
 			border:						none;
 			line-height:				1.3em;
 			color:						$brand_primary;
+			font-family:				$font-family-sans-serif-reg;
 		}
 
 		::-webkit-input-placeholder,
@@ -474,6 +477,7 @@ footer {
 		& > ul {
 
 			@include					transform(translateX(-50%));
+			font-size: 					12px;
 			
 			& li:first-child,
 			& li:last-child {
