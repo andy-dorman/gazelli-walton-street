@@ -146,18 +146,22 @@ header {
 			background-color: 	$brand-primary;
 			opacity: 			0;
 
+			& p {
+				font-family:    $font-family-sans-serif-reg;
+			}
+
 			& p,
 			& h4 {
 				color:			$gray-dark;
 				max-width:		120px;
 				margin:			auto;
-				letter-spacing: -1px;
+				letter-spacing: 0px;
 				word-wrap: 		break-word;
 			}
 
 			& h4 {
 				font-size:		20px;
-				margin-top:		24px;
+				margin-top:		12px;
 				margin-bottom:	6px;
 			}
 		}
@@ -187,6 +191,7 @@ header {
 				@include            transform(translate3d(-50%, -50%,0));
 				left:				50%;
 				color:				#FFFFFF;
+				letter-spacing: 	$letter-spacing;
 			}
 		}
 
