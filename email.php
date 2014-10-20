@@ -5,7 +5,7 @@ require 'lib/db.php';
 if(!array_key_exists('user', $_GET) || !array_key_exists('code', $_GET)) {
 	die();
 }
-$query = "SELECT * FROM customers WHERE ID = ".$_GET['user']." AND CODE = '".$_GET['code'];
+$query = "SELECT * FROM customers WHERE ID = ".$_GET['user']." AND CODE = '".$_GET['code']."'";
 mysql_query($query);
 
 if($result = mysql_query($query)) {
