@@ -96,7 +96,7 @@
 
 	            // bind form using 'ajaxForm' 
 	            $('#key_form').ajaxForm(options);
-	            countCharacters('#key_form textarea', 250);
+	            countCharacters('#key_form textarea', 50);
 	            var inactive = "inactive";
 	            var active = "active";
 	            var focused = "focused";
@@ -110,7 +110,7 @@
 	function countCharacters(obj, count) {
 	    $(obj).keydown(function (event) {
 	        if ($(obj).val().length >= count) {
-	        	alert("Your goal must be less than 250 characters long.")
+	        	alert("Your goal must be less than 50 characters long.")
 	            event.preventDefault();
 	        }
 	    });
@@ -177,4 +177,9 @@
 	}
 
 	$('.lock-in, #lock-in-link').bind('click', getForm);
+	$('#goto-top').bind('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$('html, body').animate({scrollTop: $("#top").offset().top}, 2000);
+	});
 })(jQuery)

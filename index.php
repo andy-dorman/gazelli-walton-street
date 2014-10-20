@@ -57,7 +57,7 @@ function getInitals($name) {
 
   </head>
   <body>
-  <a href="#" name="top"></a>
+  <a href="#" name="top" id="top"></a>
     <div class="container">
     <div>
       <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -97,7 +97,7 @@ function getInitals($name) {
               Introducing  a new approach to luxury and well-being
             </p>
             <p>
-              Full details will be revealed in March 2015, but for now we ask you this: if you could achieve one thing, what would it be? Determine your goal, lock it safely with us, and you’ll have already taken the first step towards making it happen.
+              Thank you for joining us in discovering the Walton Street's newest secret. No matter how big or small, your goal is about to become a part of a growing wall of inspiration, helping to bring a groundbreaking concept to life. More details will be revealed in February 2015, but for now we ask you this: if you could achieve one thing what would it be? Share your goal, lock it safely with us and we will be in touch soon with details of your special gift for taking part in our evolving journey.
             </p>
         </main>
 
@@ -192,11 +192,11 @@ function getInitals($name) {
       </div>
       <div class="social-icons bottom-hr">
         <ul class="list-inline text-center">
-            <li>share on</li>
-            <li class="social-icon twitter"><a href="https://www.twitter.com/waltonsecret"></a></li>
-            <li class="social-icon facebook"><a href="https://www.facebook.com/waltonsecret"></a></li>
-            <li class="social-icon email"><a href="https://www.instagram.com/waltonsecret"></a></li>
-            <li>@walton street</li>
+            <li>inspire your friends</li>
+            <li class="social-icon twitter"><a href="https://www.twitter.com/WaltonSecret"></a></li>
+            <li class="social-icon facebook"><a href="https://www.facebook.com/WaltonSecret"></a></li>
+            <li class="social-icon email"><a href="https://www.instagram.com/walton_secret"></a></li>
+            <li>share your goal</li>
           </ul>
       </div>
 

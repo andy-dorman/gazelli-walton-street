@@ -15,7 +15,6 @@ $lock-in-text-height: 			40px;
 body {
 	letter-spacing:				$letter-spacing;
 	background: 				#000000 url('../images/WaltonFloralBG.jpg') center top no-repeat;
-	background-size:			100%;
 }
 
 .jumbotron {
@@ -152,10 +151,12 @@ header {
 				color:			$gray-dark;
 				max-width:		120px;
 				margin:			auto;
+				letter-spacing: -1px;
+				word-wrap: 		break-word;
 			}
 
 			& h4 {
-				font-size:		$font-size-h4;
+				font-size:		20px;
 				margin-top:		24px;
 				margin-bottom:	6px;
 			}

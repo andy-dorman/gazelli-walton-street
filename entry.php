@@ -135,9 +135,9 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td style='text-align: center; padding-top: 10px;'>\n";
-	$message .= "<a href='https://www.twitter.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-twitter.png' alt='Twitter' title='Twitter'/></a>\n";
-	$message .= "<a href='https://www.facebook.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-facebook.png' alt='Facebook' title='Facebook'/></a>\n";
-	$message .= "<a href='https://www.instagram.com/waltonsecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-instagram.png' alt='Instagram' title='Instagram'/></a>\n";
+	$message .= "<a href='https://www.twitter.com/WaltonSecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-twitter.png' alt='Twitter' title='Twitter'/></a>\n";
+	$message .= "<a href='https://www.facebook.com/WaltonSecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-facebook.png' alt='Facebook' title='Facebook'/></a>\n";
+	$message .= "<a href='https://www.instagram.com/walton_secret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-instagram.png' alt='Instagram' title='Instagram'/></a>\n";
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
@@ -274,9 +274,9 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 		$out["thanks"] = '<div class="thankyou"><h3>Congratulations for locking in your goal</h3>
 		<div class="social-icons">
 			<ul class="list-inline text-center">
-				<li class="social-icon twitter dark"><a href="https://www.twitter.com/waltonsecret"></a></li>
-				<li class="social-icon facebook dark"><a href="https://www.facebook.com/waltonsecret"></a></li>
-				<li class="social-icon email dark"><a href="https://www.instagram.com/waltonsecret"></a></li>
+				<li class="social-icon twitter dark"><a href="https://www.twitter.com/WaltonSecret"></a></li>
+				<li class="social-icon facebook dark"><a href="https://www.facebook.com/WaltonSecret"></a></li>
+				<li class="social-icon email dark"><a href="https://www.instagram.com/walton_secret"></a></li>
 			</ul>
 		</div>
 		<p class="text-center">Share the Walton Secret with your friends and let them find their key</p>
