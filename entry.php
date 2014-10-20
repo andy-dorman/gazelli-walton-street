@@ -13,8 +13,8 @@ function sendEmail($email, $code, $goal, $name, $id) {
 
 	$subject = "Thank you for your goal";
 
-	$headers = "From: oliver.edge@gazelli.co.uk\r\n";
-	$headers .= "Reply-To: oliver.edge@gazelli.co.uk\r\n";
+	$headers = "From: info@waltonsecret.com\r\n";
+	$headers .= "Reply-To: info@waltonsecret.com\r\n";
 	//$headers .= "CC: susan@example.com\r\n";
 	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
