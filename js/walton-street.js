@@ -110,7 +110,7 @@
 	function countCharacters(obj, count) {
 	    $(obj).keyup(function (e) {
 	    	if(e.keyCode != 46 || e.keyCode != 8) {
-		        if ($(obj).val().length >= count) {
+		        if ($(obj).val().length > count) {
 		        	alert("Your goal must be less than 120 characters long.")
 		            e.preventDefault();
 		        }
