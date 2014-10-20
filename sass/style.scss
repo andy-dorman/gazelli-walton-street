@@ -480,12 +480,12 @@ footer {
 			@include					transform(translateX(-50%));
 			
 			.container > & li:first-child,
-			& li:last-child {
+			.container > & li:last-child {
 				display: 				block;
 				margin-bottom: 			4px;
 			}
 
-			& li:last-child {
+			.container > & li:last-child {
 				margin-top:				8px;
 				margin-bottom:			0;
 			}
