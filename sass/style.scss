@@ -297,11 +297,10 @@ footer {
 .social-icons {
 	& > ul {
 		position: 						relative;
-		@include                        transform(translateX(-46.5%));
+		@include                        transform(translateX(-51.8%));
 		left: 							50%;
 		margin-top:						16px;
 		margin-bottom:					0px;
-		width:							110%;
 		margin-left: 					0px;
 		& li {
 			line-height:				18px;
@@ -356,6 +355,7 @@ footer {
 		@include						transform(translateX(-50%));
 		margin-bottom: 10px;
 	}
+
 	& h3 {
 		padding-top:					60px;
 		color:							$site-bg;
@@ -456,6 +456,24 @@ footer {
 				}
 			}
 
+		}
+	}
+
+	.social-icons {
+		& > ul {
+
+			@include					transform(translateX(-50%));
+			
+			& li:first-child,
+			& li:last-child {
+				display: 				block;
+				margin-bottom: 			4px;
+			}
+
+			& li:last-child {
+				margin-top:				4px;
+				margin-bottom:			0;
+			}
 		}
 	}
 
