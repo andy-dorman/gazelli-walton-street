@@ -96,7 +96,7 @@
 
 	            // bind form using 'ajaxForm' 
 	            $('#key_form').ajaxForm(options);
-	            countCharacters('#key_form textarea', 50);
+	            countCharacters('#key_form textarea', 75);
 	            var inactive = "inactive";
 	            var active = "active";
 	            var focused = "focused";
@@ -110,7 +110,7 @@
 	function countCharacters(obj, count) {
 	    $(obj).keydown(function (event) {
 	        if ($(obj).val().length >= count) {
-	        	alert("Your goal must be less than 50 characters long.")
+	        	alert("Your goal must be less than 75 characters long.")
 	            event.preventDefault();
 	        }
 	    });
