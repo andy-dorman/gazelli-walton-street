@@ -224,9 +224,9 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
     	$_POST[$key] = mysql_real_escape_string($value); 
   	}
 		
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$goal = $_POST['goal'];
+	$name = mysql_real_escape_string($_POST['name']);
+	$email = mysql_real_escape_string($_POST['email']);
+	$goal = mysql_real_escape_string($_POST['goal']);
 
 	$code = getCode();
 
@@ -267,7 +267,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 
 	if($result = mysql_query($query)) {
 		$out["id"] = mysql_insert_id();
-		$out["goal"] = stripslashes($goal);
+		$out["goal"] = $_POST['goal'];
 		$out["name"] = $name;
 		$out["initials"] = $initials;
 		$out["result"] = "success";
