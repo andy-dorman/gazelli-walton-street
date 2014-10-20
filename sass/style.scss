@@ -76,6 +76,7 @@ h2 {
 
 .intro-text {
 	font-size:					13px;
+	letter-spacing:				0px;
 }
 .separator {
 	display: 					inline-block;
@@ -314,6 +315,7 @@ footer {
 		& li {
 			line-height:				18px;
 			vertical-align: 			middle;
+			text-transform:				uppercase;
 		}
 
 		& .social-icon {
