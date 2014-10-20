@@ -96,7 +96,7 @@ function getInitals($name) {
             <p class="lead">
               Introducing  a new approach to luxury and well-being
             </p>
-            <p>
+            <p class="intro-text">
               Thank you for joining us in discovering the Walton Street's newest secret. No matter how big or small, your goal is about to become a part of a growing wall of inspiration, helping to bring a groundbreaking concept to life. More details will be revealed in February 2015, but for now we ask you this: if you could achieve one thing what would it be? Share your goal, lock it safely with us and we will be in touch soon with details of your special gift for taking part in our evolving journey.
             </p>
         </main>

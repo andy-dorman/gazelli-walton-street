@@ -26,7 +26,7 @@
 		e.stopPropagation();
 		var name, wish;
 		$.ajax({
-			url: "/lib/walton-street_form.php",
+			url: "/lib/walton-secret_form.php",
 			type: "POST",
 			success: function(data) {
 			
