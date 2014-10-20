@@ -268,7 +268,7 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 
 	if($result = mysql_query($query)) {
 		$out["id"] = mysql_insert_id();
-		$out["goal"] = $_POST['goal'];
+		$out["goal"] = stripslashes($_POST['goal']);
 		$out["name"] = $name;
 		$out["initials"] = $initials;
 		$out["result"] = "success";
