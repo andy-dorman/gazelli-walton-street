@@ -47,8 +47,8 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='260'></td>\n";
-	$message .= "<td align='center' height='70'>\n";
-	$message .= "<p style='width:240px; line-height: 1.8em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift at our exclusive launch party</p>\n";
+	$message .= "<td align='center' height='70' width='480'>\n";
+	$message .= "<p style='width:250px; line-height: 1.6em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift at our exclusive launch party</p>\n";
 	$message .= "</td>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
