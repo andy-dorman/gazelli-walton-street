@@ -2,10 +2,10 @@
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
 require 'lib/db.php';
-if(!array_key_exists('user', $_GET)) {
+if(!array_key_exists('user', $_GET) || !array_key_exists('code', $_GET)) {
 	die();
 }
-$query = "SELECT * FROM customers WHERE ID = ".$_GET['user'];
+$query = "SELECT * FROM customers WHERE ID = ".$_GET['user']." AND CODE = '".$_GET['user'].";
 mysql_query($query);
 
 if($result = mysql_query($query)) {
