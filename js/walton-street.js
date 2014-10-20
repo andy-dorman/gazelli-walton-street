@@ -66,7 +66,7 @@
 	                    	<h4>' + response['initials'] + '</h4>
 	                    	<div>
 			                <h4 class="text-uppercase text-center">My goal is to</h4>
-			                <p class="text-center">' + response['goal'] + '</p>
+			                <p class="text-center">' + response['goal'].replace(/\\(.)/mg, "$1"); + '</p>
 			                </div></div>');
 	                    $(window).off('fancyboxClosed');
 	                    $(window).on('fancyboxClosed', function(){
