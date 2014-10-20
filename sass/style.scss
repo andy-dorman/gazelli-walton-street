@@ -73,7 +73,8 @@ h2 {
 }
 
 .disclaimer {
-	font-family: 				'Arial Narrow';
+	font-family: 				'Arial Narrow', Arial, Helvetica, sans-serif;
+	font-stretch: condensed;
 	letter-spacing: 			0px;
 }
 .intro-text {
@@ -429,6 +430,10 @@ footer {
 }
 
 @media(max-width:767px){
+	.disclaimer {
+		font-size: 						10px;
+	}
+
 	#walton-street_entry {
 		width:							100%;
 		& h3 {

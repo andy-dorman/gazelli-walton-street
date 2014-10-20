@@ -37,7 +37,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800' height='210'>\n\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='220'></td>\n";
-	$message .= "<td align='center' width='360'>\n";
+	$message .= "<td align='center' width='360' height='20'>\n";
 	$message .= "<p style='color: #ffffff; font-size: 8px; margin-top: 2px; padding-top: 0px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
 	$message .= "if it does not display properly <a style='color: #ffffff !important; font-size: 8px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;' href='http://waltonsecret.com/email.php?user=".$id."' >click here</a> to view it in your browser</p>\n";
 	$message .= "<td width='220'></td>\n\n";
@@ -47,7 +47,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='260'></td>\n";
-	$message .= "<td align='center'>\n";
+	$message .= "<td align='center' height='70'>\n";
 	$message .= "<p style='width:240px; line-height: 1.8em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift at our exclusive launch party</p>\n";
 	$message .= "</td>\n";
 	$message .= "<td width='260'></td>\n";
@@ -57,7 +57,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='360'></td>\n";
-	$message .= "<td align='center' width='80'>\n";
+	$message .= "<td align='center' width='80' height='25'>\n";
 	$message .= "<p style='margin: 0; padding: 0; margin-left: 2px;width:100px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
 	$message .= "Your code\n";
 	$message .= "</p>\n";
