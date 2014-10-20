@@ -112,12 +112,12 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260' style='border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='10'></td>\n";
-	$message .= "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$goal."</td>\n";
+	$message .= "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 24px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$goal."</td>\n";
 	$message .= "<td width='10'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='10'></td>\n";
-	$message .= "<td style='letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$name." ".date_format(date_create(), 'd.m.y')."</td>\n";
+	$message .= "<td style='padding: 10px 0; letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1em; font-size: 16px;font-family: \"Bodoni MT\", Didot, \"Didot LT STD\", \"Hoefler Text\", Garamond, \"Times New Roman\", serif; color: #8F4D51;'>".$name." ".date_format(date_create(), 'd.m.y')."</td>\n";
 	$message .= "<td width='10'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
