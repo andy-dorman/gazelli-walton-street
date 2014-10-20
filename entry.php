@@ -122,10 +122,10 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
-	$message .= "<td width='280'></td>\n";
+	$message .= "<td width='270'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='280'></td>\n";
+	$message .= "<td width='270'></td>\n";
 	$message .= "<td width='260' style='padding-top: 20px;'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260'>\n";
 	$message .= "<tr>\n";
@@ -142,7 +142,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
-	$message .= "<td width='280'></td>\n";
+	$message .= "<td width='270'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
