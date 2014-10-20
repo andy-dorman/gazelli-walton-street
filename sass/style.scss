@@ -134,7 +134,7 @@ header {
 		& > div {
 			position: 			absolute;
 			top: 				0px;
-			clip: 				rect(178px, 500px, 178px, 0px);
+			clip: 				rect(178px, 1000px, 178px, 0px);
 			//@include 			transition(all 0.2s ease-in-out);
 			-moz-transition: 	all 0.2s ease-in-out;
 			-o-transition: 		all 0.2s ease-in-out;
@@ -214,7 +214,7 @@ header {
 
 		&:hover > div,
 		&.hover > div {
-			clip: 				rect(0px, 500px, 178px, 0px);
+			clip: 				rect(0px, 1000px, 178px, 0px);
 			opacity: 			1;
 		}
 
