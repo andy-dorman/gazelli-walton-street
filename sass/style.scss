@@ -314,6 +314,7 @@ footer {
 		margin-top:						16px;
 		margin-bottom:					0px;
 		margin-left: 					0px;
+		font-size:						12px;
 		& li {
 			line-height:				18px;
 			vertical-align: 			middle;
@@ -477,7 +478,6 @@ footer {
 		& > ul {
 
 			@include					transform(translateX(-50%));
-			font-size: 					12px;
 			
 			& li:first-child,
 			& li:last-child {
