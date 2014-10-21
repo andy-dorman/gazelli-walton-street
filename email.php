@@ -32,7 +32,7 @@ if($result = mysql_query($query)) {
 							<td width="260"></td>
 							<td align="center">
 								<p style="width:240px; line-height: 1.8em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;">
-								Keep your key safe to receive your special gift at our exclusive launch party</p>
+								Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>
 							</td>
 							<td width="260"></td>
 						</tr>
