@@ -17,6 +17,10 @@ body {
 	background: 				#000000 url('../images/WaltonFloralBG.jpg') top left no-repeat;
 }
 
+.fancybox-skin {
+	background:					transparent;
+}
+
 .jumbotron {
 	padding-left: 				$jumbotron-side-padding;
 	padding-right: 				$jumbotron-side-padding;
