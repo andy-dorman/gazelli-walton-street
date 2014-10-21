@@ -43,7 +43,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='220'></td>\n\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td height='25' colspan='3'></td>\n";
+	$message .= "<td height='40' colspan='3'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='260'></td>\n";
@@ -53,7 +53,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td height='35' colspan='3'></td>\n";
+	$message .= "<td height='25' colspan='3'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='360'></td>\n";
