@@ -35,7 +35,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<div style='margin: 0; padding: 0; width: 100%; max-width: 800px'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='800' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
+	$message .= "<td width='800' background='http://waltonsecret.com/images/email/top.png' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800' height='210'>\n\n";
 	$message .= "<tr>\n";
 	$message .= "<td align='center' width='800' height='20' colspan='3'>\n";
@@ -72,7 +72,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='348' height='45'><img width='348' style='width: 348px; display: block' src='http://waltonsecret.com/images/email/right.png'/></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td colspan='3' width='800' height='620' valign='top' style='background: transparent url(http://waltonsecret.com/images/email/bottom.png) left top no-repeat'>\n";
+	$message .= "<td colspan='3' background='http://waltonsecret.com/images/email/bottom.png' width='800' height='620' valign='top' style='background: transparent url(http://waltonsecret.com/images/email/bottom.png) left top no-repeat'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td style='padding-top: 50px;'>\n";
