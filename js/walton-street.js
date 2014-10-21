@@ -59,37 +59,56 @@
 	                beforeSubmit: validateGoal,
 	                // pre-submit callback 
 	                success: function (response) {
-	                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
-	                    $('.key-panel').removeClass('new-goal');
-	                    var firstPanel = $(".key-panel.lock-in").first().next().clone();
-	                    var newGoal = $('<div class="new-goal key-panel col-sm-3 goal">
-	                    	<h4>' + response['initials'] + '</h4>
-	                    	<div>
-			                <h4 class="text-uppercase text-center">My goal is to</h4>
-			                <p class="text-center">' + response['goal'] + '</p>
-			                </div></div>');
-	                    $(window).off('fancyboxClosed');
-	                    $(window).on('fancyboxClosed', function(){
-	                    	// remove first blank panel
-	                    	//
-	                    	$(".key-panel:not(.lock-in):not(.goal)").first().remove();
-	                    	// insert the firstPanel before the last lock-in
-	                    	//
-	                    	$(".key-panel.lock-in").last().before(firstPanel);
-	                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
-	                    		var lastLockIn = $(".key-panel.lock-in").last().clone();
-	                    		$(".key-panel.lock-in").last().parent().children().last().remove();
-	                    		$(".key-panel").last().parent().children().first().before(lastLockIn);
-	                    	}
-		                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
-	                    });
-	                    $("#oklink").click(function (e) {
-	                        e.preventDefault();
-	                        $.fancybox.close();
-	                    });
+	                	if(response["duplicate_email"]) {
+	                		var errors = $('<div/>').attr({
+					            "id": "errors"
+					        }).html(response["duplicate_email"]);
+					        
+					        $("#walton-street_entry").append(errors);
 
-	                    
+					        var oklink = $('<a/>').attr({
+					            "id": "oklink",
+					            "href": "#ok"
+					        }).text("OK");
 
+
+					        $('#errors').append(oklink);
+					        $("#oklink").click(function (e) {
+					            e.preventDefault();
+					            $("#errors").remove();
+					        });
+
+					        $.fancybox.resize();
+	                	} else {
+		                    $("#walton-street_entry").html($("<div/>").html(response["thanks"]));
+		                    $('.key-panel').removeClass('new-goal');
+		                    var firstPanel = $(".key-panel.lock-in").first().next().clone();
+		                    var newGoal = $('<div class="new-goal key-panel col-sm-3 goal">
+		                    	<h4>' + response['initials'] + '</h4>
+		                    	<div>
+				                <h4 class="text-uppercase text-center">My goal is to</h4>
+				                <p class="text-center">' + response['goal'] + '</p>
+				                </div></div>');
+		                    $(window).off('fancyboxClosed');
+		                    $(window).on('fancyboxClosed', function(){
+		                    	// remove first blank panel
+		                    	//
+		                    	$(".key-panel:not(.lock-in):not(.goal)").first().remove();
+		                    	// insert the firstPanel before the last lock-in
+		                    	//
+		                    	$(".key-panel.lock-in").last().before(firstPanel);
+		                    	if($(".key-panel.lock-in").last().parent().children().size() > 4) {
+		                    		var lastLockIn = $(".key-panel.lock-in").last().clone();
+		                    		$(".key-panel.lock-in").last().parent().children().last().remove();
+		                    		$(".key-panel").last().parent().children().first().before(lastLockIn);
+		                    	}
+			                    $(".key-panel.lock-in").first().next().replaceWith(newGoal);
+		                    });
+		                    $("#oklink").click(function (e) {
+		                        e.preventDefault();
+		                        $.fancybox.close();
+		                    });
+		                }
 	                },
 	                dataType: "json"
 	            };
