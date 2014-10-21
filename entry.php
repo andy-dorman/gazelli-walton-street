@@ -29,9 +29,11 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "}\n";
 	$message .= "</style>\n";
 	$message .= "</head>\n";
-	$message .= "<body style='width: 100%; max-width: 800px; margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
-	$message .= "<div style='margin: 0; padding: 0; width: 800px; max-width: 800px'>\n";
-	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
+	$message .= "<body style='margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
+	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='100%'>\n";
+	$message .= "<tr>\n";
+	$message .= "<td>\n";
+	$message .= "<table cellpadding='0' cellspacing='0' border='0' style='width: 800px;' width='800' background='http://www.waltonsecret.com/images/email/email_bg.png'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='800' background='http://waltonsecret.com/images/email/top.png' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center; height: 210px;' valign='top'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n\n";
@@ -147,7 +149,9 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
-	$message .= "</div>\n";
+	$message .= "</td>\n";
+	$message .= "</tr>\n";
+	$message .= "</table>\n";
 	$message .= "</body></html>\n";
 	$headers .= "Content-Length: ".strlen($message)."\r\n\r\n";
 
