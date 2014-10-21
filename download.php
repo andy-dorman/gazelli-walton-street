@@ -8,8 +8,8 @@ $fullPath = $path."gazelli_wishingtree.xls";
 //$myFile = "/download/gazelli_wishingtree.csv";
 $fh = fopen($fullPath, 'w');
 $limit = "20";
-if($_SERVER['REQUEST_METHOD'] == "GET") {
-	$page = in_array('page', $_GET) ? $_GET['page'] : 1;
+if(array_key_exists('page', $_GET)) {
+	$page =  $_GET['page'];
 } else if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$page = $_POST['page'];
 	$entry_ids = $_POST['entry_id'];
