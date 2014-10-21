@@ -34,8 +34,8 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<div style='margin: 0; padding: 0; width: 800px; max-width: 800px'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='800' background='http://waltonsecret.com/images/email/top.png' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
-	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800' height='210'>\n\n";
+	$message .= "<td width='800' background='http://waltonsecret.com/images/email/top.png' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center; height: 210px;' valign='top'>\n";
+	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n\n";
 	$message .= "<tr>\n";
 	$message .= "<td align='center' width='800' height='20' colspan='3'>\n";
 	$message .= "<p style='color: #bbbbbb; font-size: 10px; margin: 0; margin-top: 2px; padding-top: 0px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
@@ -48,7 +48,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<tr>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "<td align='center' height='115' width='280'>\n";
-	$message .= "<p style='width:280px; line-height: 1.4em; color: #AAAAAA; font-size: 11px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>\n";
+	$message .= "<p style='width:280px; line-height: 1.4em; color: #AAAAAA; font-size: 11px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key </p>\n";
 	$message .= "</td>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
