@@ -20,7 +20,9 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	$headers .= "X-Mailer: MIME-Mail v0.03, 20070419\r\n";
 	$message = "";
-	$message .= "<html>\n";
+	$message .= "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>\n";
+	$message .= "<html xmlns:v='urn:schemas-microsoft-com:vml'>\n";
+	//$message .= "<html>\n";
 	$message .= "<head>\n";
 	$message .= "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n";
 	$message .= "<style>\n";
@@ -34,11 +36,11 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='800' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
-	$message .= "<!--[if gte mso 9]>";
-  	$message .= "<v:rect xmlns:v='urn:schemas-microsoft-com:vml' fill='true' stroke='false' style='width:800px;height:210px;'>";
-  	$message .= "<v:fill type='tile' src='http://waltonsecret.com/image/email/top.png' color='#FFFFFF' />";
-  	$message .= "<v:textbox inset='0,0,0,0'>";
-  	$message .= "<![endif]-->";
+	$message .= "<!--[if gte mso 9]>\n";
+  	$message .= "<v:rect xmlns:v='urn:schemas-microsoft-com:vml' fill='true' stroke='false' style='width:800px;height:210px;'>\n";
+  	$message .= "<v:fill type='tile' src='http://waltonsecret.com/image/email/top.png' color='#FFFFFF' />\n";
+  	$message .= "<v:textbox inset='0,0,0,0'>\n";
+  	$message .= "<![endif]-->\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800' height='210'>\n\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='220'></td>\n";
