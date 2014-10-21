@@ -86,7 +86,7 @@ if(intval($page) > 1) {
 	echo '<a style="margin-right: 10px;" href="download.php'.$prev.'"><< previous page</a>';
 }
 if(($limit * $page) < $num_records) {
-	$next = (($page + 1) * $limit) < ($num_records) ? "?page=".($page + 1) : "";
+	$next = (($page + 1) * $limit) < ($num_records + $limit) ? "?page=".($page + 1) : "";
 	echo '<a href="download.php'.$next.'">next page >></a>';
 }
 
