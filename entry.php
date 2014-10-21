@@ -34,6 +34,11 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='800' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
+	$message .= "<!--[if gte mso 9]>";
+  	$message .= "<v:rect xmlns:v='urn:schemas-microsoft-com:vml' fill='true' stroke='false' style='width:800px;height:210px;'>";
+  	$message .= "<v:fill type='tile' src='http://waltonsecret.com/image/email/top.png' color='#FFFFFF' />";
+  	$message .= "<v:textbox inset='0,0,0,0'>";
+  	$message .= "<![endif]-->";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800' height='210'>\n\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='220'></td>\n";
@@ -65,6 +70,10 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='360'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
+	$message .= "<!--[if gte mso 9]>";
+	$message .= "</v:textbox>";
+	$message .= "</v:rect>";
+	$message .= "<![endif]-->";
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
