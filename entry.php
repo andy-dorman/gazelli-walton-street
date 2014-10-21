@@ -31,7 +31,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "}\n";
 	$message .= "</style>\n";
 	$message .= "</head>\n";
-	$message .= "<body style='margin: 0; padding: 0;'>\n";
+	$message .= "<body style='margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
 	$message .= "<div style='margin: 0; padding: 0; width: 100%; max-width: 800px'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
