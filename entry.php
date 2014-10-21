@@ -43,12 +43,12 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td width='220'></td>\n\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td height='40' colspan='3'></td>\n";
+	$message .= "<td height='25' colspan='3'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "<td align='center' height='70' width='480'>\n";
-	$message .= "<p style='width:250px; line-height: 1.6em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift at our exclusive launch party</p>\n";
+	$message .= "<p style='width:250px; line-height: 1.6em; color: #AAAAAA; font-size: 12px; padding-top: 10px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>\n";
 	$message .= "</td>\n";
 	$message .= "<td width='260'></td>\n";
 	$message .= "</tr>\n";
