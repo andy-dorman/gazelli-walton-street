@@ -12,11 +12,11 @@ if($result = mysql_query($query)) {
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 ?>
 <html>
-<body style="margin: 0; padding: 0;">
+<body style="margin: 0; padding: 0; background: transparent url(../images/email/ws-email_bg.png') top left no-repeat;">
 	<div style="margin: 0; padding: 0;">
 		<table cellpadding="0" cellspacing="0" border="0" width="800">
 			<tr>
-				<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; background: transparent url(images/email/top.png) left top no-repeat; text-align: center;" valign="top">
+				<td width="800" height="210" colspan="3" style="color: #ffffff; font-size: 8px; font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; background: transparent url(images/email/ws-top.png) left top no-repeat; text-align: center;" valign="top">
 					<table cellpadding="0" cellspacing="0" border="0" width="800">
 						<tr>
 							<td width="220"></td>
@@ -52,12 +52,12 @@ if($result = mysql_query($query)) {
 				</td>
 			</tr>
 			<tr>
-				<td width="348"><img src="images/email/left.png"/></td>
+				<td width="348"><img src="images/email/ws-left.png"/></td>
 				<td width="104"><img src="images/email_codes/<?php echo $row['code']?>.png" alt="Your code" /></td>
-				<td width="348"><img src="images/email/right.png"/></td>
+				<td width="348"><img src="images/email/ws-right.png"/></td>
 			</tr>
 			<tr>
-				<td colspan="3" width="800" height="620" valign="top" style="background: transparent url(images/email/bottom.png) left top no-repeat">
+				<td colspan="3" width="800" height="620" valign="top" style="background: transparent url(images/email/ws-bottom.png) left top no-repeat">
 					<table cellpadding="0" cellspacing="0" border="0" width="800">
 						<tr>
 							<td style="padding-top: 50px;">
