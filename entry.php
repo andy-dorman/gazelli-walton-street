@@ -30,7 +30,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</style>\n";
 	$message .= "</head>\n";
 	$message .= "<body style='margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/ws-email_bg.png'>\n";
-	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='100%'>\n";
+	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800px' style='min-width:800px; width: 800px;'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' style='width: 800px;' width='800' background='http://www.waltonsecret.com/images/email/email_bg.png'>\n";
