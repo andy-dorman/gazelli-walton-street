@@ -20,9 +20,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	$headers .= "X-Mailer: MIME-Mail v0.03, 20070419\r\n";
 	$message = "";
-	$message .= "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>\n";
-	$message .= "<html xmlns:v='urn:schemas-microsoft-com:vml'>\n";
-	//$message .= "<html>\n";
+	$message .= "<html>\n";
 	$message .= "<head>\n";
 	$message .= "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n";
 	$message .= "<style>\n";
