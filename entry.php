@@ -123,15 +123,15 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='270' style='width:270px;'></td>\n";
-	$message .= "<td width='260' style='padding-top: 20px;'>\n";
+	$message .= "<td width='260' style='width: 260px; padding-top: 20px;'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260'>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='260' style='text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px;'>\n";
+	$message .= "<td width='260' style='width: 260px; text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px;'>\n";
 	$message .= "<p style='font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'>Share the Walton Secret with your friends and help them find their key</p>\n";
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td style='text-align: center; padding-top: 10px;'>\n";
+	$message .= "<td style='width: 260px; text-align: center; padding-top: 10px;'>\n";
 	$message .= "<a href='https://www.twitter.com/WaltonSecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-twitter.png' alt='Twitter' title='Twitter'/></a>\n";
 	$message .= "<a href='https://www.facebook.com/WaltonSecret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-facebook.png' alt='Facebook' title='Facebook'/></a>\n";
 	$message .= "<a href='https://www.instagram.com/walton_secret' style='margin-left: 4px; margin-right: 4px;'><img src='http://waltonsecret.com/images/email/icon-instagram.png' alt='Instagram' title='Instagram'/></a>\n";
