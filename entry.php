@@ -256,15 +256,17 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	    printf("Connect failed: %s\n", mysql_error());
 	    exit();
 	}*/
-	/*
+
 	if($email !== "info@gazelli.co.uk" && $email !== "o.edge@gazelli.co.uk" && $email !== "oliver.edge@gazelli.co.uk") {
 		$query = "SELECT * FROM customers WHERE email = '".$email."'";
 		if($result = mysql_query($query)) {
-			mysql_close($mysqli);
-			$out['duplicate_email'] = "You can only submit one goal per email address.";
-			die(json_encode($out));
+			while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+				mysql_close($mysqli);
+				$out['duplicate_email'] = "You can only submit one goal per email address.";
+				die(json_encode($out));
+			}
 		}
-	}*/
+	}
 
 	$query = "INSERT INTO customers (name, email, goal, code) VALUES ('".$name."', '".$email."',  '".$goal."', '".$code."')";
 	
