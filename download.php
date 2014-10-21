@@ -82,14 +82,17 @@ echo '<table  cellspacing="0">';
 echo $rows;
 echo "</table>";
 echo "<div>";
-if($page > 1) {
+if($page > 0) {
 	$prev = ($page - 1 > 0) ? "?page=".($page - 1) : "";
 	echo '<a href="download.php'.$prev.'"><< previous page</a>';
 }
 if(($limit * $page) < $num_records) {
 	$next = (($page + 1) * $limit) < ($num_records + $limit) ? "?page=".($page + 1) : "";
-	echo '<a href="download.php'.$next.'">next page >></a>';
+	if($next != "") {
+		echo '<a href="download.php'.$next.'">next page >></a>';
+	}
 }
+
 echo '</div>';
 echo '<input type="submit" value="Delete selected records"/>';
 echo '<input type="hidden" name="page" value="'.$page.'"/>';
