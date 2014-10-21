@@ -32,7 +32,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</style>\n";
 	$message .= "</head>\n";
 	$message .= "<body style='margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
-	$message .= "<div style='margin: 0; padding: 0; width: 100%; max-width: 800px'>\n";
+	$message .= "<div style='margin: 0; padding: 0; width: 800px; min-width: 800px; max-width: 800px'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='100%'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='100%' background='http://waltonsecret.com/images/email/top.png' height='210' colspan='3' style='color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/top.png) left top no-repeat; text-align: center;' valign='top'>\n";
