@@ -56,7 +56,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<tr>\n";
 	$message .= "<td width='240'></td>\n";
 	$message .= "<td align='center' width='320' height='25'>\n";
-	$message .= "<p style='margin: 0; padding: 0; height: 20px; padding-top: 5px; width:320px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
+	$message .= "<p style='margin: 0; padding: 0; height: 20px; padding-top: 15px; width:320px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
 	$message .= "Your code\n";
 	$message .= "</p>\n";
 	$message .= "</td>\n";
