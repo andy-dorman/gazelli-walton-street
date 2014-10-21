@@ -49,14 +49,14 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<tr>\n";
 	$message .= "<td width='240'></td>\n";
 	$message .= "<td align='center' height='115' width='320'>\n";
-	$message .= "<p style='width:320px; line-height: 1.4em; color: #AAAAAA; font-size: 11px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>\n";
+	$message .= "<p style='width:290px; padding: 0 15px; line-height: 1.4em; color: #AAAAAA; font-size: 11px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>\n";
 	$message .= "</td>\n";
 	$message .= "<td width='240'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='240'></td>\n";
 	$message .= "<td align='center' width='320' height='25'>\n";
-	$message .= "<p style='margin: 0; padding: 0; width:320px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
+	$message .= "<p style='margin: 0; padding: 0; height: 20px; padding-top: 5px; width:320px; color: #ffffff; letter-spacing: 1px;text-transform: uppercase; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif;'>\n";
 	$message .= "Your code\n";
 	$message .= "</p>\n";
 	$message .= "</td>\n";
