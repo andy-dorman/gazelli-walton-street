@@ -81,13 +81,13 @@ echo '<table  cellspacing="0">';
 echo $rows;
 echo "</table>";
 echo "<div>";
-if($page > 0) {
+if(intval($page) > 1) {
 	$prev = ($page - 1 > 0) ? "?page=".($page - 1) : "";
 	echo '<a style="margin-right: 10px;" href="download.php'.$prev.'"><< previous page</a>';
 }
 if(($limit * $page) < $num_records) {
 	$next = (($page + 1) * $limit) < ($num_records) ? "?page=".($page + 1) : "";
-	if($next !== "") {
+	if(!empty($next)) {
 		echo '<a href="download.php'.$next.'">next page >></a>';
 	}
 }
