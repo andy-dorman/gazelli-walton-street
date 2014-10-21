@@ -87,10 +87,7 @@ if(intval($page) > 1) {
 }
 if(($limit * $page) < $num_records) {
 	$next = (($page + 1) * $limit) < ($num_records) ? "?page=".($page + 1) : "";
-	echo $next;
-	if(!empty($next)) {
-		echo '<a href="download.php'.$next.'">next page >></a>';
-	}
+	echo '<a href="download.php'.$next.'">next page >></a>';
 }
 
 echo '</div>';
