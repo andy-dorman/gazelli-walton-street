@@ -37,7 +37,7 @@ if($result = mysql_query($query)) {
 							<td width="260"></td>
 						</tr>
 						<tr>
-							<td height="65" colspan="3"></td>
+							<td height="35" colspan="3"></td>
 						</tr>
 						<tr>
 							<td width="360"></td>
