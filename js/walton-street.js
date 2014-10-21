@@ -62,8 +62,8 @@
 	                	if(response["duplicate_email"]) {
 	                		var errors = $('<div/>').attr({
 					            "id": "errors"
-					        }).html(response["duplicate_email"]);
-					        
+					        }).html('<ul><li>' + response["duplicate_email"] + '</li></ul>');
+
 					        $("#walton-street_entry").append(errors);
 
 					        var oklink = $('<a/>').attr({
