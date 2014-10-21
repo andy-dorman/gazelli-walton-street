@@ -23,14 +23,13 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<html>\n";
 	$message .= "<head>\n";
 	$message .= "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n";
-	$message .= "<meta name='viewport' content='width=device-width, initial-scale=1.0' />\n";
 	$message .= "<style>\n";
 	$message .= "p a {\n";
 	$message .= "color: #FFFFFF;\n";
 	$message .= "}\n";
 	$message .= "</style>\n";
 	$message .= "</head>\n";
-	$message .= "<body style='-webkit-text-size-adjust:none; -ms-text-size-adjust:none; width: 800px; margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
+	$message .= "<body style='width: 100%; max-width: 800px; margin: 0; padding: 0; background: transparent url(http://www.waltonsecret.com/images/email/email_bg.png'>\n";
 	$message .= "<div style='margin: 0; padding: 0; width: 800px; max-width: 800px'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
