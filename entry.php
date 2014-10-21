@@ -104,7 +104,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<td>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='800'>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='270'></td>\n";
+	$message .= "<td width='270' style='width:270px;'></td>\n";
 	$message .= "<td width='260' style='padding-top: 50px;'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260' style='border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;'>\n";
 	$message .= "<tr>\n";
@@ -119,15 +119,15 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
-	$message .= "<td width='270'></td>\n";
+	$message .= "<td width='270'style='width:270px;'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='270'></td>\n";
+	$message .= "<td width='270' style='width:270px;'></td>\n";
 	$message .= "<td width='260' style='padding-top: 20px;'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='260'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='260' style='text-align: center; vertical-align: middle; line-height: 1.6em; font-size: 12px;'>\n";
-	$message .= "<p style='font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'>Share the Walton Secret with your friends and help them find their key</p>\n";
+	$message .= "<p style='font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'>Share the Walton Secret with your friends and help them find their key</p>\n";
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
@@ -139,7 +139,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
-	$message .= "<td width='270'></td>\n";
+	$message .= "<td width='270' style='width:270px;'></td>\n";
 	$message .= "</tr>\n";
 	$message .= "</table>\n";
 	$message .= "</td>\n";
