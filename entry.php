@@ -257,10 +257,10 @@ if(!$_SERVER['REQUEST_METHOD'] == "POST") {
 	$bboxDim = imagettfbbox( 20, 0, "fonts/BodoniXT", $code );
 	$textWidth = abs($bboxDim[4] - $bboxDim[0]);
 	
-	$scale = 102/$textWidth;
+	$scale = 95/$textWidth;
 	$fontSize = 20 * $scale;
 
-	imagettftext( $my_img, $fontSize, 0, 1, 38, $text_colour, "fonts/BodoniXT", $code);
+	imagettftext( $my_img, $fontSize, 0, 5, 38, $text_colour, "fonts/BodoniXT", $code);
 	imagepng( $my_img , "images/email_codes/".$code.".png");
 	imagecolordeallocate( $my_img, $text_colour );
 	imagecolordeallocate( $my_img, $background );
