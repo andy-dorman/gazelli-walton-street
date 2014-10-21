@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
 	$page = 1;
 }
 $query = "SELECT * FROM customers;";
-$pagedquery = "SELECT * FROM customers ORDER BY created_at DESC LIMIT ".$limit." OFFSET ".(($page * $limit)).";";
+$pagedquery = "SELECT * FROM customers ORDER BY created_at DESC LIMIT ".$limit." OFFSET ".((($page-1) * $limit)).";";
 echo $pagedquery;
 $rows = "<tr><th></th><th>Name</th><th>Email</th><th>Goal</th><th>Code</th><th>Entry date</th></tr>\n";
 $num_records = 0;
