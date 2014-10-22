@@ -33,7 +33,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='600' style='min-width:600px; width: 600px;'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td>\n";
-	$message .= "<table cellpadding='0' cellspacing='0' border='0' style='width: 600px;' width='600' background='http://www.waltonsecret.com/images/email/email_bg.png'>\n";
+	$message .= "<table cellpadding='0' cellspacing='0' border='0' style='width: 600px;' width='600' background='http://www.waltonsecret.com/images/email/ws-email_bg.png'>\n";
 	$message .= "<tr>\n";
 	$message .= "<td width='600' colspan='3' style='max-width: 600px; color: #eeeeee; font-size: 8px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; background: transparent url(http://waltonsecret.com/images/email/ws-top.png) left top no-repeat; text-align: center; height: 210px;' valign='top'>\n";
 	$message .= "<table cellpadding='0' cellspacing='0' border='0' width='600'>\n\n";
