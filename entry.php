@@ -66,11 +66,11 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .= "</td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
-	$message .= "<td width='248' style='width: 248px;' height='45'><img width='248' style='max-width: 248px; width: 100%; display: block' src='http://waltonsecret.com/images/email/ws-left.png'/></td>\n";
-	$message .= "<td width='104' height='45' style='width: 104px;'><img width='104' style='display: block; width: 100%; max-width: 104px;' src='";
+	$message .= "<td width='248' style='width: 248px;' height='45'><img width='248' style='max-width: 248px; width: 248px; display: block' src='http://waltonsecret.com/images/email/ws-left.png'/></td>\n";
+	$message .= "<td width='104' height='45' style='width: 104px;'><img width='104' style='display: block; width: 104px; max-width: 104px;' src='";
 	$message .= "http://waltonsecret.com/images/email_codes/".$code.".png";
 	$message .= "' alt='Your code' /></td>\n";
-	$message .= "<td width='248' style='width: 248px;' height='45'><img width='248' style='max-width: 248px; width: 100%; display: block' src='http://waltonsecret.com/images/email/ws-right.png'/></td>\n";
+	$message .= "<td width='248' style='width: 248px;' height='45'><img width='248' style='max-width: 248px; width: 248px; display: block' src='http://waltonsecret.com/images/email/ws-right.png'/></td>\n";
 	$message .= "</tr>\n";
 	$message .= "<tr>\n";
 	$message .= "<td colspan='3' width='600' height='620' valign='top' style='background: transparent url(http://waltonsecret.com/images/email/ws-bottom.png) left top no-repeat'>\n";
