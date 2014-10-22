@@ -172,7 +172,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .="<td style='height: 10px;' height='10'>\n";
 	$message .="</tr>\n";
 	$message .="<tr>\n";
-	$message .="<td align='center' style='text-align: center; width: 260px;' width='260'>\n";
+	$message .="<td align='center' style='text-align: center; width: 260px; margin: 0 auto;' width='260'>\n";
 	$message .="<table cellpadding='0' cellspacing='0' border='0' width='100' align='center'>\n";
 	$message .="<tr>\n";
 	$message .="<td>\n";
