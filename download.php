@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 require 'lib/db.php';
 
 $path = $_SERVER['DOCUMENT_ROOT']."/download/"; // change the path to fit your websites document structure
-$fullPath = $path."gazelli_wishingtree.xls";
+$fullPath = $path."walton-secret.xls";
 //$myFile = "/download/gazelli_wishingtree.csv";
 $fh = fopen($fullPath, 'w');
 $limit = "20";
