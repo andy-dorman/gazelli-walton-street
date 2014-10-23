@@ -94,7 +94,7 @@ if($result = mysql_query($query)) {
 											<table cellpadding="0" cellspacing="0" border="0" width="260" style="border-top: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; height: 240px;">
 												<tr>
 													<td width="10"></td>
-													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 26px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo $row['goal']?></td>
+													<td style="letter-spacing: 1px; text-align: center; vertical-align: middle; line-height: 1.4em; font-size: 22px;font-family: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif; color: #8F4D51;"><?php echo stripslashes($row['goal'])?></td>
 													<td width="10"></td>
 												</tr>
 												<tr>
