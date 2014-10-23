@@ -6,5 +6,5 @@ $mysqli = mysql_connect("localhost", "walton", "w4lt0ns3cr3t");
 if (!$mysqli) {
     die('Could not connect: ' . mysql_error());
 }
-mysql_select_db("walton-secret", $mysqli);
+mysql_select_db("waltonsecret", $mysqli);
 ?>
