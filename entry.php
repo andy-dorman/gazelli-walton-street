@@ -62,6 +62,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .="<table cellpadding='0' cellspacing='0' border='0'>\n";
     $message .="<tr>\n";
     $message .="<td height='10' style='height:10px'></td>\n";
+    $message .="</tr>\n";
     $message .="<tr>\n";
     $message .="<td align='center' height='55' width='305' style='margin: 0; width: 305px; height: 55px; line-height: 1.2em; color: #AAAAAA; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; margin: 0;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</td>\n";
     $message .="</tr>\n";
