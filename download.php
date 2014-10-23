@@ -70,7 +70,7 @@ mysql_close($mysqli);
 <link rel="icon" type="image/png" href="gazelli_icon.png">
 </head>
 <body>
-<a href="/download/gazelli_wishingtree.xls">Download Current customer entry list</a>
+<a href="/download/walton-secret.xls">Download Current customer entry list</a>
 <?php
 echo '<style>
 		table { border: 1px solid black; margin: 20px;}
