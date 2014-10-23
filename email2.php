@@ -46,9 +46,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .="<table cellpadding='0' cellspacing='0' border='0'>\n";
 	$message .="<tr>\n";
 	$message .="<td width='250' height='65'><img style='display: block; min-width: 250px; width:250px; height: 65px;' width='250' height='65' src='http://www.waltonsecret.com/images/email/top-row-3-left.png'/></td>\n";
-	$message .="<td align='center' height='65' width='305'>\n";
-	$message .="<p style='width: 305px; padding-top: 10px; height: 55px; line-height: 1.2em; color: #AAAAAA; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; margin: 0;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</p>\n";
-	$message .="</td>\n";
+	$message .="<td align='center' height='65' width='305' style='width: 305px; padding-top: 10px; height: 55px; line-height: 1.2em; color: #AAAAAA; font-size: 12px; font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; margin: 0;'>Keep your key safe to receive your special gift after out launch in 2015. You will be contacted with further details on claiming you gift at a later date.</td>\n";
 	$message .="<td width='245' height='65'><img style='display: block; min-width: 245px; width:245px; height: 65px;' width='245' height='65' src='http://www.waltonsecret.com/images/email/top-row-3-right.png'/></td>\n";
 	$message .="</tr>\n";
 	$message .="</table>\n";
@@ -155,9 +153,7 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	$message .="<td  style='height: 10px;' height='10'>\n";
 	$message .="</tr>\n";
 	$message .="<tr>\n";
-	$message .="<td width='260' style='text-align: center; vertical-align: middle; line-height: 1.2em; font-size: 12px;'>\n";
-	$message .="<p style='margin: 0; padding: 0;font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'>Share the Walton Secret with your friends and help them find their key</p>\n";
-	$message .="</td>\n";
+	$message .="<td width='260' style='vertical-align: middle; line-height: 1.2em; font-size: 12px;margin: 0; padding: 0;font-family: \"Century Gothic\", CenturyGothic, AppleGothic, sans-serif; color: #AAAAAA; text-align:center'>Share the Walton Secret with your friends and help them find their key</td>\n";
 	$message .="</tr>\n";
 	$message .="<tr>\n";
 	$message .="<td style='height: 10px;' height='10'>\n";
@@ -206,6 +202,6 @@ function sendEmail($email, $code, $goal, $name, $id) {
 	mail($to, $subject, $message, $headers);
 }
 //$email, $code, $goal, $name, $id
-sendEmail("oliver.edge@gazelli.co.uk", "1234", "A goal", "Andy Dorman", 12);
+sendEmail("andydorman@gmail.com", "1234", "A goal", "Andy Dorman", 12);
 echo "done...";
 ?>
